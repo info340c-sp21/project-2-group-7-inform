@@ -178,7 +178,7 @@ input.search-query:hover {
 .logo {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
-  background-image: url("../img/iSchoolSymbolOnly_RGB_Purple.png");
+  background-image: url("./img/iSchoolSymbolOnly_RGB_Purple.png");
   background-position: left;
   background-size: contain;
   background-repeat: no-repeat;
@@ -227,7 +227,7 @@ input.search-query:hover {
 .background-image {
   padding-top: 4vh;
   padding-bottom: 4vh;
-  background-image: url(../img/mgh.jpg);
+  background-image: url("./img/mgh.jpg");
   background-position: center;
   background-size: cover;
 }
@@ -268,23 +268,23 @@ input.search-query:hover {
 }
 
 .course-image-hci {
-  background-image: url("../img/hci.jpg");
+  background-image: url("./img/hci.jpg");
 }
 
 .course-image-ds {
-  background-image: url("../img/ds.jpg");
+  background-image: url("./img/ds.jpg");
 }
 
 .course-image-bio {
-  background-image: url("../img/bio.jpg");
+  background-image: url("./img/bio.jpg");
 }
 
 .course-image-ia {
-  background-image: url("../img/ia.jpg");
+  background-image: url("./img/ia.jpg");
 }
 
 .course-image-iac {
-  background-image: url("../img/iac.png");
+  background-image: url("./img/iac.png");
 }
 
 .course-name-wrap {
@@ -397,23 +397,23 @@ input.search-query:hover {
   }
 
   .course-image-hci {
-    background-image: url("../img/hci.jpg");
+    background-image: url("./img/hci.jpg");
   }
   
   .course-image-ds {
-    background-image: url("../img/ds.jpg");
+    background-image: url("./img/ds.jpg");
   }
   
   .course-image-bio {
-    background-image: url("../img/bio.jpg");
+    background-image: url("./img/bio.jpg");
   }
   
   .course-image-ia {
-    background-image: url("../img/ia.jpg");
+    background-image: url("./img/ia.jpg");
   }
   
   .course-image-iac {
-    background-image: url("../img/iac.png");
+    background-image: url("./img/iac.png");
   }
 
   .background-image {
