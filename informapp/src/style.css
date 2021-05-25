@@ -1,0 +1,470 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: "Open Sans", sans-serif;
+  overflow-x: hidden;
+}
+
+.btn {
+  border-radius: 15px;
+}
+.btn-outline-primary {
+  color: #fff;
+  border-color: #4b2e83;
+  background-color: #4b2e83;
+}
+
+.btn-outline-primary:hover {
+  color: #fff;
+  border-color: #b7a57a;
+  background-color: #b7a57a;
+}
+
+.btn-outline-primary:active {
+  border-color: #b7a57a;
+  background-color: #b7a57a;
+}
+
+.btn-secondary {
+  color: #000;
+  background-color: #b7a57a;
+  border-color: #b7a57a;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.16), 0px 1px 3px rgba(0, 0, 0, 0.23);
+}
+
+.navbar {
+  font-family: "Encode Sans", sans-serif;
+}
+
+.custom-toggler.navbar-toggler {
+  border-color: white;
+}
+
+.navbar-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+/* navbar */
+.navbar-default {
+  background-color: #4b2e83;
+  border-color: #e7e7e7;
+}
+
+/* Title */
+.navbar-default .navbar-brand {
+  color: #ffffff;
+}
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+  color: #b7a57a;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+/* Link */
+.navbar-default .navbar-nav > li > a {
+  color: #ffffff;
+}
+
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  color: #b7a57a;
+}
+
+/* Caret */
+.navbar-default .navbar-nav > .dropdown > a .caret {
+  border-top-color: #b7a57a;
+  border-bottom-color: #b7a57a;
+}
+
+.navbar-default .navbar-nav > .open > a .caret,
+.navbar-default .navbar-nav > .open > a:hover .caret,
+.navbar-default .navbar-nav > .open > a:focus .caret {
+  border-top-color: #4b2e83;
+  border-bottom-color: #4b2e83;
+}
+
+.navbar-default .navbar-nav > .dropdown > a:hover .caret,
+.navbar-default .navbar-nav > .dropdown > a:focus .caret {
+  border-top-color: #b7a57a;
+  border-bottom-color: #b7a57a;
+}
+
+/* Mobile version */
+.navbar-default .navbar-toggle {
+  border-color: #ffffff;
+}
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+  background-color: #b7a57a;
+}
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #ccc;
+}
+
+@media (max-width: 767px) {
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+    color: #ffffff;
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+    color: #b7a57a;
+  }
+}
+main {
+  min-height: 100%;
+  margin-bottom: -75px;
+}
+
+.text-align-center {
+  text-align: center;
+}
+
+.modal-body {
+  text-align: left;
+}
+
+main::after {
+  content: "";
+  display: block;
+}
+
+.title:nth-child(1) {
+  background: white;
+  padding: 0.75rem;
+  box-shadow: 1px 3px rgba(0, 0, 0, 0.16), 0px 1px 3px rgba(0, 0, 0, 0.23);
+  border-radius: 35px;
+  display: inline-block;
+}
+
+h1 {
+  font-family: "Encode Sans", sans-serif;
+  font-weight: 900px;
+  color: #4b2e83;
+  font-size: 2.5rem;
+}
+
+h2 {
+  color: #4b2e83;
+  margin-top: 1rem;
+  font-size: 1.5rem;
+}
+
+p {
+  margin: 0;
+}
+
+.search {
+  margin: auto;
+  width: 350px;
+}
+
+input.search-query {
+  color: #ffffff;
+  background-color: #eee;
+}
+
+input.search-query:hover {
+  background-color: #b7a57a;
+}
+
+.logo {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  background-image: url("../img/iSchoolSymbolOnly_RGB_Purple.png");
+  background-position: left;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.checkbox-menu li label {
+  display: block;
+  padding: 3px 10px;
+  clear: both;
+  font-weight: normal;
+  line-height: 1.42857143;
+  color: #333;
+  white-space: nowrap;
+  margin: 0;
+  transition: background-color 0.4s ease;
+}
+.checkbox-menu li input {
+  margin: 0px 5px;
+  top: 2px;
+  position: relative;
+}
+
+.checkbox-menu li label:hover,
+.checkbox-menu li label:focus {
+  background-color: #f5f5f5;
+}
+
+.checkbox-menu li.active label:hover,
+.checkbox-menu li.active label:focus {
+  background-color: #b8b8ff;
+}
+
+.dropdown {
+  margin: 0.5rem;
+  display: inline-block;
+}
+
+.dropdown-filters {
+  margin-top: 3rem;
+}
+
+.dropdown-menu {
+  min-width: 120px;
+}
+
+.background-image {
+  padding-top: 4vh;
+  padding-bottom: 4vh;
+  background-image: url(../img/mgh.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.card-container {
+  margin-top: 1.5em;
+}
+
+.course-cards {
+  width: 90%;
+  margin: 1rem;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.16), 0px 1px 3px rgba(0, 0, 0, 0.23);
+  background-color: white;
+  display: flex;
+  border-radius: 8px;
+}
+
+.course-cards:hover {
+  background-color: #bdb9b9;
+}
+
+.course-name {
+  min-height: 4.5rem;
+  min-width: 37%;
+  background-position: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  border-radius: 8px;
+}
+
+.card-h1 {
+  color: white;
+  font-weight: 800;
+  font-size: 1.25rem;
+  font-family: "Open Sans", sans-serif;
+}
+
+.course-image-hci {
+  background-image: url("../img/hci.jpg");
+}
+
+.course-image-ds {
+  background-image: url("../img/ds.jpg");
+}
+
+.course-image-bio {
+  background-image: url("../img/bio.jpg");
+}
+
+.course-image-ia {
+  background-image: url("../img/ia.jpg");
+}
+
+.course-image-iac {
+  background-image: url("../img/iac.png");
+}
+
+.course-name-wrap {
+  background: rgba(50, 0, 111, 0.67);
+  height: 100%;
+  width: 100%;
+  min-height: 6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px 0 0 8px;
+}
+
+.course-name-wrap p {
+  color: white;
+  font-weight: 800;
+  font-size: 1.25rem;
+}
+
+.course-description {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+.course-description h2 {
+  color: black;
+  font-size: 1em;
+  text-align: left;
+}
+
+.course-tags {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 0.5rem;
+}
+
+.tag {
+  margin: 0.3rem;
+  margin-top: 0.3rem;
+  margin-left: 0.3rem;
+  border: 2px solid #67a185;
+  background-color: #91ddb8;
+  padding: 0.3rem;
+  border-radius: 10px;
+  min-width: 2rem;
+  text-align: center;
+}
+
+.tag p {
+  font-size: 0.7rem;
+  font-weight: 500;
+  padding: 0;
+  margin: 0;
+  color: black;
+}
+
+@media (min-width: 767px) {
+  .course-cards {
+    width: 40rem;
+    min-height: 6rem;
+    margin-top: 1.8rem;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  img {
+    max-width: 70%;
+    max-height: 60%;
+  }
+
+  .background-image {
+    padding-top: 8vh;
+    padding-bottom: 8vh;
+  }
+}
+
+@media (min-width: 850px) {
+  .course-cards {
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+    margin-right: 1rem;
+    margin-left: 1rem;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.16), 0px 1px 3px rgba(0, 0, 0, 0.23);
+    background-color: white;
+    flex-direction: column;
+    width: 12rem;
+  }
+
+  .course-name {
+    max-width: 100%;
+    width: 12rem;
+  }
+
+  .course-name-wrap {
+    width: 12rem;
+    height: 4rem;
+    background: rgba(50, 0, 111, 0.67);
+    border-radius: 8px 8px 0 0;
+  }
+
+  .course-description {
+    margin-top: 0.2rem;
+    padding-left: 0.3rem;
+    padding-right: 0.3rem;
+  }
+
+  .tag {
+    margin-top: 0.3rem;
+    margin-left: 0;
+  }
+
+  .course-image-hci {
+    background-image: url("../img/hci.jpg");
+  }
+  
+  .course-image-ds {
+    background-image: url("../img/ds.jpg");
+  }
+  
+  .course-image-bio {
+    background-image: url("../img/bio.jpg");
+  }
+  
+  .course-image-ia {
+    background-image: url("../img/ia.jpg");
+  }
+  
+  .course-image-iac {
+    background-image: url("../img/iac.png");
+  }
+
+  .background-image {
+    padding-top: 7vh;
+    padding-bottom: 7vh;
+  }
+}
+
+footer,
+main:after {
+  height: 75px;
+}
+
+footer {
+  margin-top: 2em;
+  background-color: #4b2e83;
+  color: white;
+  overflow: hidden;
+}
+
+.footer-content {
+  padding-top: 1rem;
+}
+
+/* PAGE 2 ABOUT */
+
+.about {
+  text-align: left;
+}
+
+img {
+  max-width: 70%;
+  max-height: 70%;
+  margin: 2em;
+  margin-bottom: 0.5rem;
+}
+
+.developers {
+  justify-content: center;
+}
+
+/* PAGE 3 COURSE CARD DESCRIPTION */
+
+.page-card {
+  padding-top: 3rem;
+}
+
+.page-card-bottom {
+  padding-bottom: 3rem;
+}
+
+.no-center {
+  text-align: none;
+}
