@@ -1,2 +1,2 @@
 'use strict';
-// Daniel & Catherin
+// Daniel & Catherine
