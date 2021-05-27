@@ -70,6 +70,7 @@ body {
 /* Title */
 .navbar-default .navbar-brand {
   color: #ffffff;
+  margin-left: 1rem;
 }
 .navbar-default .navbar-brand:hover,
 .navbar-default .navbar-brand:focus {
@@ -437,7 +438,7 @@ input.search-query:hover {
 
 footer,
 main:after {
-  height: 75px;
+  height: 90px;
 }
 
 footer {
