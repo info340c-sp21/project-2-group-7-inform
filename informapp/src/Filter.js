@@ -39,7 +39,8 @@ export default function Filter() {
             </div>
           </div>
           <div className="search">
-            <DropdownFilters trackToDisplay={filteredTrack} 
+            <DropdownFilters 
+              trackToDisplay={filteredTrack} 
               quarterToDisplay={filteredQuarter} 
               offeringToDisplay={filteredOffering}
               setTrack={setFilteredTrack}

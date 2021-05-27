@@ -1,8 +1,7 @@
-'use strict';
 // Daniel & Catherine
 import React from 'react';
 import './style.css'
-import { Icon, InlineIcon } from '@iconify/react';
+import { Icon } from '@iconify/react';
 import paperPlaneO from '@iconify-icons/fa/paper-plane-o';
 
 

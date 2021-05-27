@@ -1,4 +1,3 @@
-'use strict';
 // Daniel & Catherine
 
 import React from 'react';

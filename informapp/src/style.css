@@ -70,6 +70,7 @@ body {
 /* Title */
 .navbar-default .navbar-brand {
   color: #ffffff;
+  margin-left: 1rem;
 }
 .navbar-default .navbar-brand:hover,
 .navbar-default .navbar-brand:focus {
@@ -95,14 +96,12 @@ a:hover {
   border-top-color: #b7a57a;
   border-bottom-color: #b7a57a;
 }
-
 .navbar-default .navbar-nav > .open > a .caret,
 .navbar-default .navbar-nav > .open > a:hover .caret,
 .navbar-default .navbar-nav > .open > a:focus .caret {
   border-top-color: #4b2e83;
   border-bottom-color: #4b2e83;
 }
-
 .navbar-default .navbar-nav > .dropdown > a:hover .caret,
 .navbar-default .navbar-nav > .dropdown > a:focus .caret {
   border-top-color: #b7a57a;
@@ -437,7 +436,7 @@ input.search-query:hover {
 
 footer,
 main:after {
-  height: 75px;
+  height: 90px;
 }
 
 footer {
