@@ -70,7 +70,7 @@ body {
 /* Title */
 .navbar-default .navbar-brand {
   color: #ffffff;
-  margin-left: 1rem;
+  padding: .5rem 1rem;
 }
 .navbar-default .navbar-brand:hover,
 .navbar-default .navbar-brand:focus {
@@ -171,6 +171,7 @@ main::after {
 
 p {
   margin: 0;
+  font-family: "Open Sans", sans-serif !important;
 }
 
 .search {
@@ -245,7 +246,7 @@ input.search-query:hover {
 }
 
 .card-container {
-  margin-top: 1.5em;
+  margin-top: 1.5em !important;
 }
 
 .course-cards {
@@ -277,6 +278,10 @@ input.search-query:hover {
   font-weight: 800;
   font-size: 1.25rem;
   font-family: "Open Sans", sans-serif;
+}
+
+.row {
+  --bs-gutter-x: none !important;
 }
 
 .course-image-hci {
@@ -322,9 +327,9 @@ input.search-query:hover {
 }
 
 .course-description h2 {
-  color: black;
-  font-size: 1em;
-  text-align: left;
+  color: black !important;
+  font-size: 1em !important;
+  text-align: left !important;
 }
 
 .course-tags {
