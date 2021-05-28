@@ -18,14 +18,15 @@ function App() {
         <Navbar />
         
         <Switch>
-          <Route path="/courses"> 
+        <Route path="/about">
+            <About />
+          </Route>
+          
+          <Route path="/"> 
             <Filter />
             <CourseCard courses={CourseLog}/>
           </Route>
 
-          <Route path="/about">
-            <About />
-          </Route>
         </Switch>
 
         <Footer />

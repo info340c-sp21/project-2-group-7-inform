@@ -19,12 +19,11 @@ export default function About() {
               Washington, INFOrm is an all-in-one web-app designed for both current and future Informatics students
               to help search and plan for both in-major and pre-approved courses. 
             </p>
-            &nbsp;
           </Container>
         </Jumbotron>
       </div>
 
-      <div className="container">
+      <div className="container pt-5">
         <div className="developers">
         &nbsp;
           <h1 className="align-items-start headerone">INFOrm Team</h1>

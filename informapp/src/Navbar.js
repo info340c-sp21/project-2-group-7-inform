@@ -26,7 +26,7 @@ export default function InfoNavbar() {
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
             <NavItem>
-              <Link to="/courses" className="nav-link" >Courses</Link>
+              <Link to="/" className="nav-link" >Courses</Link>
             </NavItem>
             <NavItem>
               <Link to='/about' className="nav-link">About</Link>
@@ -35,7 +35,7 @@ export default function InfoNavbar() {
         </Collapse>
       </Navbar>
       <Switch>
-        <Route exact path='/courses' />
+        <Route exact path='/' />
         <Route exact path='/about' />
       </Switch>
     </div>

@@ -71,6 +71,7 @@ body {
 .navbar-default .navbar-brand {
   color: #ffffff;
   padding: .5rem 1rem;
+  margin-right: none;
 }
 .navbar-default .navbar-brand:hover,
 .navbar-default .navbar-brand:focus {
@@ -459,6 +460,8 @@ footer {
 
 .about {
   text-align: left;
+  padding: 4rem 2rem;
+  background-color: #e9ecef;
 }
 
 img {
@@ -470,6 +473,7 @@ img {
 
 .developers {
   justify-content: center;
+  padding-bottom: 3.38rem;
 }
 
 /* PAGE 3 COURSE CARD DESCRIPTION */
