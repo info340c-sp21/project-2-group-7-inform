@@ -10,7 +10,7 @@ import CourseLog from './data/info_course.json';
 function App() {
   return (
     // PUT COMPONENT IN DIV IF YOU WANT TO TEST IT/DISPLAY ON NPM START
-    <div className="App">
+    <div>
       {/* If you want to test your component, just call it here! */}
       <Navbar />
       <Filter />
