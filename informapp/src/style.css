@@ -58,16 +58,35 @@ body {
 }
 
 .navbar-toggler .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E") !important;
 }
 
 /* navbar */
 .navbar-default {
   background-color: #4b2e83;
   border-color: #e7e7e7;
+  padding: .5rem 1rem;
+}
+
+.navbar-nav {
+  font-size: 0.8em;
+}
+
+.navbar-light .navbar-toggler {
+  color: white !important;
+  border-color: white !important;
+}
+
+.navbar-nav .nav-link {
+  padding-right: 1rem !important;
+  padding-left: 1rem !important;
 }
 
 /* Title */
+.navbar-brand {
+  margin-right: 0rem !important;
+}
+
 .navbar-default .navbar-brand {
   color: #ffffff;
   padding: .5rem 1rem;
@@ -83,12 +102,12 @@ a:hover {
 
 /* Link */
 .navbar-default .navbar-nav > li > a {
-  color: #ffffff;
+  color: #ffffff !important;
 }
 
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
-  color: #b7a57a;
+  color: #b7a57a !important;
 }
 
 /* Caret */
@@ -206,7 +225,7 @@ input.search-query:hover {
   color: #333;
   white-space: nowrap;
   margin: 0;
-  transition: background-color 0.4s ease;
+  transition: 0.4s ease;
 }
 .checkbox-menu li input {
   margin: 0px 5px;
@@ -459,6 +478,8 @@ footer {
 
 .about {
   text-align: left;
+  padding: 4rem 2rem;
+  background-color: #e9ecef;
 }
 
 img {
@@ -470,6 +491,7 @@ img {
 
 .developers {
   justify-content: center;
+  padding-bottom: 3.38rem;
 }
 
 /* PAGE 3 COURSE CARD DESCRIPTION */

@@ -9,14 +9,21 @@ export default function Filter() {
   const [filteredTrack, setFilteredTrack] = useState([
     'Biomedical & Health Informatics', 'Data Science', 'Human-Computer Interaction', 'Information Architecture', 'Information Assurance & Cybersecurity'
   ]);
+  console.log(filteredTrack);
 
   const [filteredQuarter, setFilteredQuarter] = useState([
     'SU21', 'AU21','WI22', 'SP22'
   ]);
+  console.log(filteredQuarter);
 
   const [filteredOffering, setFilteredOffering] = useState([
     'INFO', 'NON-INFO'
   ]);
+  console.log(filteredOffering);
+
+
+  const courseFilter = {filteredTrack, filteredQuarter, filteredOffering}
+  console.log(courseFilter);
 
   return(
     <div className="text-align-center">
@@ -107,17 +114,17 @@ function FilterDropdown (props) {
 // makes a single checkbox line
 function Checkboxes(props) {
   const toggleSelection = () => props.onSelectionChangeCallBack(
-    toggleElementInArray(props.entryKey, props.selectedKeys),
-    console.log(props.entryKey, props.selectedKeys),
+    toggleElementInArray(props.entryKey, props.selectedKeys)
   )
 
   return(
 
     <li onClick={toggleSelection} className="checkbox-menu">
+      <label aria-label={props.entryName}>
       <input type="checkbox"
             checked={props.selectedKeys.indexOf(props.entryKey) !== -1}
             onChange={toggleSelection} aria-label={props.entryName} />
-      <label aria-label={props.entryName}>{props.entryName}</label>
+      {props.entryName}</label>
     </li>
 
   );
