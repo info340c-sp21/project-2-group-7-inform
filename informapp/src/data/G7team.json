@@ -1,7 +1,7 @@
 [
-    {"name":"Ian Wang", "year":"Freshman", "major":"Informatics", "img": "img/ian_profile1.jpeg" },
-    {"name":"Leon Kan", "year":"Junior", "major":"Informatics", "img": "img/leons_profile1.png"},
-    {"name":"Catherine Miao", "year":"Junior", "major":"Business & Informatics", "img":"img/catherine_profile1.jpeg"},
-    {"name":"Daniel Miau", "year":"Junior", "major":"Informatics", "img":"img/daniel_profile1.jpeg"}
+    {"name":"Ian Wang", "key":"ian", "year":"Freshman", "major":"Informatics", "img": "https://raw.githubusercontent.com/info340c-sp21/project-2-group-7-inform/e26cbfdae2fc76682ab8025eb34274489abe21bb/informapp/src/img/ian_profile1.jpeg?token=AIRXPADE5RTQOSGYTHRQDJLAXKCMW", "linkedin":"https://www.linkedin.com/in/ianywang"},
+    {"name":"Leon Kan", "key":"leon", "year":"Junior", "major":"Informatics", "img": "https://raw.githubusercontent.com/info340c-sp21/project-2-group-7-inform/e26cbfdae2fc76682ab8025eb34274489abe21bb/informapp/src/img/leons_profile1.png?token=AIRXPAGTRSFUFRRFUFZS2DTAXKCVW", "linkedin":"https://www.linkedin.com/in/leon-kan/"},
+    {"name":"Catherine Miao", "key":"catherine", "year":"Junior", "major":"Business & Informatics", "img":"https://raw.githubusercontent.com/info340c-sp21/project-2-group-7-inform/e26cbfdae2fc76682ab8025eb34274489abe21bb/informapp/src/img/catherine_profile1.jpg?token=AIRXPACC2BYBJQ32YCFAUGTAXKCUK", "linkedin":"https://www.linkedin.com/in/catherinemiao2022/"},
+    {"name":"Daniel Miau", "key":"daniel", "year":"Junior", "major":"Informatics", "img":"https://raw.githubusercontent.com/info340c-sp21/project-2-group-7-inform/e26cbfdae2fc76682ab8025eb34274489abe21bb/informapp/src/img/daniel_profile1.jpg?token=AIRXPABR2HAKPK6AEYRDWLTAXKCWY", "linkedin":"https://www.linkedin.com/in/danielmiau12/"}
 ]
 

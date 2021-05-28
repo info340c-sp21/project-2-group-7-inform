@@ -6,6 +6,7 @@ import Footer from './Footer';
 import About from './About';
 import './style.css';
 import CourseLog from './data/info_course.json';
+import DevLog from './data/G7team.json'
 import { HashRouter, Route, Switch } from 'react-router-dom';
 
 function App() {
@@ -19,7 +20,7 @@ function App() {
         
         <Switch>
           <Route path="/about">
-            <About />
+            <About devs={DevLog}/>
           </Route>
           
           <Route path="/"> 

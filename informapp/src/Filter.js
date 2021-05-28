@@ -14,10 +14,16 @@ export default function Filter() {
   const [filteredQuarter, setFilteredQuarter] = useState([
     'SU21', 'AU21','WI22', 'SP22'
   ]);
+  console.log(filteredQuarter);
 
   const [filteredOffering, setFilteredOffering] = useState([
     'INFO', 'NON-INFO'
   ]);
+  console.log(filteredOffering);
+
+
+  const courseFilter = {filteredTrack, filteredQuarter, filteredOffering}
+  console.log(courseFilter);
 
   return(
     <div className="text-align-center">
