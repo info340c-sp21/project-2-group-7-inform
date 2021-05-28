@@ -9,22 +9,24 @@ import { Container, Jumbotron } from 'reactstrap';
 
 export default function About() {
   return (
-    <div class="text-align-left">
-      <div class="about">
-        <Jumbotron >
+    <div className="text-align-left">
+      <div className="about">
+        <Jumbotron style = {{backgroundColor: '#e9ecef'}}>
           <Container>
             <h1 className="headerone">About</h1>
-            <p class="lead aboutp">
-              INFOrm is an all-in-one web-app designed for Informatics students
-              to help search and plan for both in-major and pre-approved
-              courses.
+            <p className="lead aboutp">
+              Welcome to INFOrm! Developed by iSchool students at the University of 
+              Washington, INFOrm is an all-in-one web-app designed for both current and future Informatics students
+              to help search and plan for both in-major and pre-approved courses. 
             </p>
+            &nbsp;
           </Container>
         </Jumbotron>
       </div>
 
       <div class="container">
         <div class="developers">
+        &nbsp;
           <h1 class="align-items-start headerone">INFOrm Team</h1>
           <div class="row justify-content-md-center text-align-center">
               <div class="ians-profile col">
