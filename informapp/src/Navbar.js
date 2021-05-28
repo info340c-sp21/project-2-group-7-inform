@@ -4,7 +4,7 @@ import React, {useState} from 'react';
 import './style.css'
 import About from './About';
 import App from './App';
-import {HashRouter as Router, Switch, Route, Link} from "react-router-dom";
+import { Switch, Route, Link} from "react-router-dom";
 import {
   Collapse,
   Navbar,
@@ -20,14 +20,13 @@ export default function InfoNavbar() {
   const toggle = () => setIsOpen(!isOpen);
   return(
     <div>
-      <Router>
       <Navbar className="navbar-default navbar-brand" light expand="md">
         <NavbarBrand className="navbar-brand text-white">INFOrm</NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
             <NavItem>
-              <Link className="nav-link" to="/#">Courses</Link>
+              <Link to="/courses" className="nav-link" >Courses</Link>
             </NavItem>
             <NavItem>
               <Link to='/about' className="nav-link">About</Link>
@@ -36,10 +35,9 @@ export default function InfoNavbar() {
         </Collapse>
       </Navbar>
       <Switch>
-        <Route exact path='/#' component={ App } />
-        <Route exact path='/about' component={ About } />
+        <Route exact path='/courses' />
+        <Route exact path='/about' />
       </Switch>
-      </Router>
     </div>
   );
 }
