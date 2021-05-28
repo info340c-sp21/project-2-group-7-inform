@@ -68,10 +68,13 @@ body {
 }
 
 /* Title */
+.navbar-brand {
+  margin-right: 0rem !important;
+}
+
 .navbar-default .navbar-brand {
   color: #ffffff;
   padding: .5rem 1rem;
-  margin-right: none;
 }
 .navbar-default .navbar-brand:hover,
 .navbar-default .navbar-brand:focus {
