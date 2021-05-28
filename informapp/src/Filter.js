@@ -7,7 +7,7 @@ import { Dropdown, DropdownToggle, DropdownMenu} from 'reactstrap'; //Dropdown I
 
 export default function Filter() {
   const [filteredTrack, setFilteredTrack] = useState([
-    'Biomedical & Health Informatics', 'Data Science', 'Human-Computer Interaction', 'Information Architecture', 'Information Assurance & Cybersecurity'
+    'BIO', 'DS', 'HCI', 'IA', 'IAC'
   ]);
   console.log(filteredTrack);
 
@@ -61,7 +61,7 @@ export default function Filter() {
 }
 
 function DropdownFilters(props) {
-  let tracks = ['Biomedical & Health Informatics', 'Data Science', 'Human-Computer Interaction', 'Information Architecture', 'Information Assurance & Cybersecurity'];
+  let tracks = ['BIO', 'DS', 'HCI', 'IA', 'IAC'];
   let quarter = ['SU21', 'AU21','WI22', 'SP22'];
   let offering = ['INFO', 'NON-INFO'];
 
@@ -121,10 +121,9 @@ function Checkboxes(props) {
 
     <li onClick={toggleSelection} className="checkbox-menu">
       <label aria-label={props.entryName}>
-      <input type="checkbox"
-            checked={props.selectedKeys.indexOf(props.entryKey) !== -1}
-            onChange={toggleSelection} aria-label={props.entryName} />
-      {props.entryName}</label>
+        <input onChange={toggleSelection} checked={props.selectedKeys.indexOf(props.entryKey) !== -1} type="checkbox" aria-label={props.entryName} />
+        {props.entryName}
+      </label>
     </li>
 
   );
