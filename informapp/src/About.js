@@ -24,49 +24,49 @@ export default function About() {
         </Jumbotron>
       </div>
 
-      <div class="container">
-        <div class="developers">
+      <div className="container">
+        <div className="developers">
         &nbsp;
-          <h1 class="align-items-start headerone">INFOrm Team</h1>
-          <div class="row justify-content-md-center text-align-center">
-              <div class="ians-profile col">
+          <h1 className="align-items-start headerone">INFOrm Team</h1>
+          <div className="row justify-content-md-center text-align-center">
+              <div className="ians-profile col">
                 <a href="https://www.linkedin.com/in/ianywang" target="_blank"
                   ><img
                     src={Ian}
-                    class="rounded-circle shadow"
+                    className="rounded-circle shadow"
                     alt="ian's profile picture"
                 /></a>
                 <h2 className="headertwo">Ian Wang</h2>
                 <p>Freshman studying Informatics</p>
               </div>
   
-              <div class="leons-profile col">
+              <div className="leons-profile col">
                 <a href="https://www.linkedin.com/in/leon-kan/" target="_blank"
                   ><img
                     src={Leon}
-                    class="rounded-circle shadow"
+                    className="rounded-circle shadow"
                     alt="leon's profile picture"
                 /></a>
                 <h2 className="headertwo">Leon Kan</h2>
                 <p>Junior studying Informatics</p>
               </div>
 
-              <div class="catherines-profile col">
+              <div className="catherines-profile col">
                 <a href="https://www.linkedin.com/in/catherinemiao2022/" target="_blank"
                   ><img
                     src={Catherine}
-                    class="rounded-circle shadow"
+                    className="rounded-circle shadow"
                     alt="catherine's profile picture"
                 /></a>
                 <h2 className="headertwo">Catherine Miao</h2>
                 <p>Junior studying Business and Informatics</p>
               </div>
 
-              <div class="daniels-profile col">
+              <div className="daniels-profile col">
                 <a href="https://www.linkedin.com/in/danielmiau12/" target="_blank"
                   ><img
                     src={Daniel}
-                    class="rounded-circle shadow"
+                    className="rounded-circle shadow"
                     alt="daniel's profile picture"
                 /></a>
                 <h2 className="headertwo">Daniel Miau</h2>
