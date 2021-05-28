@@ -35,13 +35,8 @@ export default function InfoNavbar() {
         </Collapse>
       </Navbar>
       <Switch>
-<<<<<<< HEAD
-      <Route exact path='/#' component={ App } />
-      <Route exact path='/about' component={ About } />
-=======
         <Route exact path='/courses' />
         <Route exact path='/about' />
->>>>>>> 6eedfe740622dda90adba343522b4dbdf80db6ff
       </Switch>
     </div>
   );
