@@ -6,11 +6,11 @@ import Footer from './Footer';
 import About from './About';
 import './style.css';
 import CourseLog from './data/info_course.json';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { HashRouter, Route, Switch } from 'react-router-dom';
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       {/* // PUT COMPONENT IN DIV IF YOU WANT TO TEST IT/DISPLAY ON NPM START */}
       {/* IAN TEST */}
       <div className="App">
@@ -32,7 +32,7 @@ function App() {
         <Footer />
         {/* IE: <Navbar /> etc etc. */}
       </div>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
