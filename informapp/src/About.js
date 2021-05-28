@@ -1,6 +1,6 @@
 // Daniel & Catherine
 
-import React, { Component } from 'react';
+import React from 'react';
 import Ian from './img/ian_profile1.jpeg';
 import Leon from './img/leons_profile1.png';
 import Catherine from './img/catherine_profile1.jpg';

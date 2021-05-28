@@ -2,9 +2,7 @@
 
 import React, {useState} from 'react';
 import './style.css'
-import About from './About';
-import App from './App';
-import { Switch, Route, Link} from "react-router-dom";
+import { Switch, Route, Link } from "react-router-dom";
 import {
   Collapse,
   Navbar,

@@ -18,7 +18,7 @@ function App() {
         <Navbar />
         
         <Switch>
-        <Route path="/about">
+          <Route path="/about">
             <About />
           </Route>
           
@@ -26,7 +26,6 @@ function App() {
             <Filter />
             <CourseCard courses={CourseLog}/>
           </Route>
-
         </Switch>
 
         <Footer />
