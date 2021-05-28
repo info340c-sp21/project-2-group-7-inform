@@ -44,7 +44,7 @@ function CardContent(props) { // <- pass course data as props
             </div> {/* end of 2 tags */}
           </div> {/* end of course description */}
         </div>
-        <CourseModal /> {/* need `props` */}
+        {/* <CourseModal /> need `props` */}
       </>
     );
   })
