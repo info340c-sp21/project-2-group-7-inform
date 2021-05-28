@@ -12,6 +12,7 @@ function App() {
   return (
     <BrowserRouter>
       {/* // PUT COMPONENT IN DIV IF YOU WANT TO TEST IT/DISPLAY ON NPM START */}
+      {/* IAN TEST */}
       <div className="App">
         {/* If you want to test your component, just call it here! */}
         <Navbar />
