@@ -11,7 +11,7 @@ export default function About() {
   return (
     <div className="text-align-left">
       <div className="about">
-        <Jumbotron style = {{backgroundColor: '#e9ecef'}}>
+        <Jumbotron >
           <Container>
             <h1 className="headerone">About</h1>
             <p className="lead aboutp">
