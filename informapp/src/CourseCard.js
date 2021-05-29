@@ -5,13 +5,29 @@ import React from "react";
 
 function CourseCard(props) {
   let dropdownFilters= props.dropdownSelection;
+  console.log("dropdown filters:");
   console.log(dropdownFilters);
 
-  let data = props.courses;
-  console.log(data);
+  let CourseLogData = props.courses;
+  console.log(CourseLogData);
 
-  let trackSelection = Object.values(dropdownFilters)[0].filter(trackSelection => trackSelection.Track === "BIO");
+  let trackSelection = Object.values(CourseLogData).filter(oneCourse => oneCourse.Track === "BIO"); // for debugging purpose
   console.log(trackSelection);
+  
+  let selectedCourses = [];
+  // loop courses, use each course to find its match in filter options
+  for (let oneCourse of CourseLogData) {
+
+    // loop thru all selected filter options
+    for (let oneFilterItem of dropdownFilters[0]) { // iterate `track` filter
+      // check if current course contains in `selectedCourses`
+
+    }
+
+  }
+  // lastly render `selectedCourses` into cards
+
+  
 
 
 
@@ -21,7 +37,7 @@ function CourseCard(props) {
     <div className="text-align-center">
       <div className="container">
         <div className="card-container row justify-content-md-center">
-          <CardContent courses={props.courses}/>
+          <CardContent courses={trackSelection}/>
         </div>
       </div>
     </div>
