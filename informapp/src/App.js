@@ -17,19 +17,25 @@ function App() {
       {/* IAN TEST */}
       <div className="App">
         {/* If you want to test your component, just call it here! */}
-        <Navbar />
-        
-        <Switch>
-          <Route path="/about">
-            <About devs={DevLog}/>
-          </Route>
-          
-          <Route path="/"> 
-            <Courses courses={CourseLog} />
-            {/* <Filter />
-            <CourseCard courses={CourseLog}/> */}
-          </Route>
-        </Switch>
+        <div className="header">
+            <Navbar />
+        </div>
+        <div className="main">
+          <Switch>
+            <Route path="/about">
+              <About devs={DevLog}/>
+            </Route>
+            
+            <Route path="/"> 
+              <div className="text-align-center">
+                <Courses courses={CourseLog} />
+              </div>
+              {/* <Filter />
+              <CourseCard courses={CourseLog}/> */}
+            </Route>
+          </Switch>
+
+        </div>
 
         <Footer />
         {/* IE: <Navbar /> etc etc. */}

@@ -150,7 +150,7 @@ a:hover {
 }
 main {
   min-height: 100%;
-  margin-bottom: -75px;
+  margin-bottom: -90px;
 }
 
 .text-align-center {
@@ -464,7 +464,7 @@ main:after {
 }
 
 footer {
-  margin-top: 2em;
+  margin-top: 2em !important;
   background-color: #4b2e83;
   color: white;
   overflow: hidden;

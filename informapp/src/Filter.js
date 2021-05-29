@@ -24,34 +24,32 @@ export default function Filter(props) {
   // const courseFilter = {filteredTrack, filteredQuarter, filteredOffering};
 
   return(
-    <div className="text-align-center">
-      <div className="background-image">
-        <div className="container">
-          <div className="title">
-            <div className="container">
-              <div className="titles">
-                <div className="title-one">
-                  <h1 className="headerone">
-                    <span className="logo">&nbsp;</span>INFOrm
-                  </h1>
-                </div>
-                <div className="title-two">
-                  <h2 className="headertwo">
-                    Browse Informatics Courses
-                  </h2>
-                </div>
+    <div className="background-image">
+      <div className="container">
+        <div className="title">
+          <div className="container">
+            <div className="titles">
+              <div className="title-one">
+                <h1 className="headerone">
+                  <span className="logo">&nbsp;</span>INFOrm
+                </h1>
+              </div>
+              <div className="title-two">
+                <h2 className="headertwo">
+                  Browse Informatics Courses
+                </h2>
               </div>
             </div>
           </div>
-          <div className="search">
-            <DropdownFilters 
-              trackToDisplay={props.filteredTrack} 
-              quarterToDisplay={props.filteredQuarter} 
-              offeringToDisplay={props.filteredOffering}
-              setTrack={props.setFilteredTrack}
-              setQuarter={props.setFilteredQuarter}
-              setOffering={props.setFilteredOffering} />
-          </div>
+        </div>
+        <div className="search">
+          <DropdownFilters 
+            trackToDisplay={props.filteredTrack} 
+            quarterToDisplay={props.filteredQuarter} 
+            offeringToDisplay={props.filteredOffering}
+            setTrack={props.setFilteredTrack}
+            setQuarter={props.setFilteredQuarter}
+            setOffering={props.setFilteredOffering} />
         </div>
       </div>
     </div>
