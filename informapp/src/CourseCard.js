@@ -1,18 +1,13 @@
 // Ian & Leon
 import "./style.css";
 import React from "react";
-// import CourseModal from "./CourseModal";
+// import CourseModal from "./CourseModal"; // Temporarily muted
 
 function CourseCard(props) {
   let dropdownFilters = props.dropdownSelection;
-  // console.log(dropdownFilters.filteredTrack);
-  // console.log("dropdown filters:");
-  // console.log(dropdownFilters);
-
   let courseLogData = props.courses;
-  // console.log(CourseLogData);
-
-  // let trackSelection = Object.values(courseLogData).filter(oneCourse => oneCourse.Track === "BIO"); // for debugging purpose
+  // for debugging purpose
+  // let trackSelection = Object.values(courseLogData).filter(oneCourse => oneCourse.Track === "BIO");
   // console.log(trackSelection);
   
   let selectedCourses = [];
@@ -26,26 +21,28 @@ function CourseCard(props) {
         selectedCourses.push(oneCourse);
       }
     }
-    // // loop thru all selected filter options
-    // for (let oneFilterItem of dropdownFilters.filteredOffering) { // iterate `track` filter
-    //   // check if current course contains in `selectedCourses`
-    //   if(oneCourse.InMajor === oneFilterItem ) {
-    //     selectedCourses.push(oneCourse);
-    //   }
-    // }
   }
 
   for (let oneCourse of courseLogData) {
-
     // loop thru all selected filter options
-    for (let oneFilterItem of dropdownFilters.filteredQuarter) { // iterate `track` filter
+    for (let oneFilterItem of dropdownFilters.filteredQuarter) { // iterate `quarter` filter
       // check if current course contains in `selectedCourses`
-      if(oneCourse.Quarter === oneFilterItem && !selectedCourses.includes(oneCourse)) {
+      if(oneCourse.Quarter.includes(oneFilterItem) && !selectedCourses.includes(oneCourse)) {
+        selectedCourses.push(oneCourse);
+      }
+    } // inner for loop
+  } // outer for loop
+
+  for (let oneCourse of courseLogData) {
+    // loop thru all selected filter options
+    for (let oneFilterItem of dropdownFilters.filteredOffering) { // iterate `offering` filter
+      // check if current course contains in `selectedCourses`
+      if(oneCourse.InMajor===(oneFilterItem) && !selectedCourses.includes(oneCourse)) {
         selectedCourses.push(oneCourse);
       }
     }
   }
-      
+
 
   // lastly render `selectedCourses` into cards
   console.log("selected courses", selectedCourses);
