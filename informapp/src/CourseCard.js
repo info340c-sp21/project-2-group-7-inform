@@ -4,40 +4,57 @@ import React from "react";
 // import CourseModal from "./CourseModal";
 
 function CourseCard(props) {
-  let dropdownFilters= props.dropdownSelection;
-  console.log("dropdown filters:");
-  console.log(dropdownFilters);
+  let dropdownFilters = props.dropdownSelection;
+  // console.log(dropdownFilters.filteredTrack);
+  // console.log("dropdown filters:");
+  // console.log(dropdownFilters);
 
-  let CourseLogData = props.courses;
-  console.log(CourseLogData);
+  let courseLogData = props.courses;
+  // console.log(CourseLogData);
 
-  let trackSelection = Object.values(CourseLogData).filter(oneCourse => oneCourse.Track === "BIO"); // for debugging purpose
-  console.log(trackSelection);
+  // let trackSelection = Object.values(courseLogData).filter(oneCourse => oneCourse.Track === "BIO"); // for debugging purpose
+  // console.log(trackSelection);
   
   let selectedCourses = [];
   // loop courses, use each course to find its match in filter options
-  for (let oneCourse of CourseLogData) {
+  for (let oneCourse of courseLogData) {
 
     // loop thru all selected filter options
-    for (let oneFilterItem of dropdownFilters[0]) { // iterate `track` filter
+    for (let oneFilterItem of dropdownFilters.filteredTrack) { // iterate `track` filter
       // check if current course contains in `selectedCourses`
-
+      if(oneCourse.Track === oneFilterItem && !selectedCourses.includes(oneCourse)) {
+        selectedCourses.push(oneCourse);
+      }
     }
-
+    // // loop thru all selected filter options
+    // for (let oneFilterItem of dropdownFilters.filteredOffering) { // iterate `track` filter
+    //   // check if current course contains in `selectedCourses`
+    //   if(oneCourse.InMajor === oneFilterItem ) {
+    //     selectedCourses.push(oneCourse);
+    //   }
+    // }
   }
+
+  for (let oneCourse of courseLogData) {
+
+    // loop thru all selected filter options
+    for (let oneFilterItem of dropdownFilters.filteredQuarter) { // iterate `track` filter
+      // check if current course contains in `selectedCourses`
+      if(oneCourse.Quarter === oneFilterItem && !selectedCourses.includes(oneCourse)) {
+        selectedCourses.push(oneCourse);
+      }
+    }
+  }
+      
+
   // lastly render `selectedCourses` into cards
-
+  console.log("selected courses", selectedCourses);
   
-
-
-
-
-
   return (
     <div className="text-align-center">
       <div className="container">
         <div className="card-container row justify-content-md-center">
-          <CardContent courses={trackSelection}/>
+          <CardContent courses={selectedCourses}/>
         </div>
       </div>
     </div>

@@ -19,7 +19,7 @@
    "Quarter": ["AU21"],
    "Credit": "IS",
    "CourseDescription": "Focuses on human-centered design of technologies for personal health and wellness. Students will learn how to understand people's health and wellness needs, consider ethical implications, assess existing tools, and design new health and wellness technologies. Students will learn theoretical and empirical approaches to evaluating these technologies.",
-   "InMajor": "in"
+   "InMajor": "INFO"
  },
  {
    "CoursePrefix": "INFO",
@@ -30,7 +30,7 @@
    "Quarter": ["WI22"],
    "Credit": "IS, QSR",
    "CourseDescription": "Introduces applications of Informatics skills to \nevaluating public health. Students will learn how to leverage their \nprogramming and data competencies towards measuring and describing the \nhealth of a population. Students will learn about and compute metrics of\n population health, and leverage visualization to communicate \nstatistical insights to broad audiences. Prerequisite: INFO 201.",
-   "InMajor": "in"
+   "InMajor": "INFO"
  },
  {
    "CoursePrefix": "INFO",
