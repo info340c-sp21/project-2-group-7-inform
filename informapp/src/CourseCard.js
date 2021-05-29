@@ -1,7 +1,7 @@
 // Ian & Leon
 import "./style.css";
 import React from "react";
-import CourseModal from "./CourseModal";
+// import CourseModal from "./CourseModal";
 
 function CourseCard(props) {
   let dropdownFilters= props.dropdownSelection;
@@ -10,7 +10,8 @@ function CourseCard(props) {
   let data = props.courses;
   console.log(data);
 
-  
+  let trackSelection = Object.values(dropdownFilters)[0].filter(trackSelection => trackSelection.Track === "BIO");
+  console.log(trackSelection);
 
 
 
