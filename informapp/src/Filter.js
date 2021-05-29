@@ -5,25 +5,23 @@ import { toggleElementInArray } from './array.js';
 import { Dropdown, DropdownToggle, DropdownMenu} from 'reactstrap'; //Dropdown Item removed
 // Ian & Leon
 
-export default function Filter() {
-  const [filteredTrack, setFilteredTrack] = useState([
-    'BIO', 'DS', 'HCI', 'IA', 'IAC'
-  ]);
-  console.log(filteredTrack);
+export default function Filter(props) {
+  // const [filteredTrack, setFilteredTrack] = useState([
+  //   'BIO', 'DS', 'HCI', 'IA', 'IAC'
+  // ]);
+  // console.log(filteredTrack);
 
-  const [filteredQuarter, setFilteredQuarter] = useState([
-    'SU21', 'AU21','WI22', 'SP22'
-  ]);
-  console.log(filteredQuarter);
+  // const [filteredQuarter, setFilteredQuarter] = useState([
+  //   'SU21', 'AU21','WI22', 'SP22'
+  // ]);
+  // console.log(filteredQuarter);
 
-  const [filteredOffering, setFilteredOffering] = useState([
-    'INFO', 'NON-INFO'
-  ]);
-  console.log(filteredOffering);
+  // const [filteredOffering, setFilteredOffering] = useState([
+  //   'INFO', 'NON-INFO'
+  // ]);
+  // console.log(filteredOffering);
 
-
-  const courseFilter = {filteredTrack, filteredQuarter, filteredOffering}
-  console.log(courseFilter);
+  // const courseFilter = {filteredTrack, filteredQuarter, filteredOffering};
 
   return(
     <div className="text-align-center">
@@ -47,12 +45,12 @@ export default function Filter() {
           </div>
           <div className="search">
             <DropdownFilters 
-              trackToDisplay={filteredTrack} 
-              quarterToDisplay={filteredQuarter} 
-              offeringToDisplay={filteredOffering}
-              setTrack={setFilteredTrack}
-              setQuarter={setFilteredQuarter}
-              setOffering={setFilteredOffering} />
+              trackToDisplay={props.filteredTrack} 
+              quarterToDisplay={props.filteredQuarter} 
+              offeringToDisplay={props.filteredOffering}
+              setTrack={props.setFilteredTrack}
+              setQuarter={props.setFilteredQuarter}
+              setOffering={props.setFilteredOffering} />
           </div>
         </div>
       </div>
@@ -112,7 +110,7 @@ function FilterDropdown (props) {
 }
 
 // makes a single checkbox line
-function Checkboxes(props) {
+function Checkboxes (props) {
   const toggleSelection = () => props.onSelectionChangeCallBack(
     toggleElementInArray(props.entryKey, props.selectedKeys)
   )
@@ -121,7 +119,7 @@ function Checkboxes(props) {
 
     <li onClick={toggleSelection} className="checkbox-menu">
       <label aria-label={props.entryName}>
-        <input onChange={toggleSelection} checked={props.selectedKeys.indexOf(props.entryKey) !== -1} type="checkbox" aria-label={props.entryName} />
+        <input type="checkbox" checked={props.selectedKeys.indexOf(props.entryKey) !== -1} onChange={toggleSelection} aria-label={props.entryName} />
         {props.entryName}
       </label>
     </li>

@@ -1,9 +1,10 @@
 import React from 'react';
-import Filter from './Filter';
-import CourseCard from './CourseCard';
+// import Filter from './Filter';
+// import CourseCard from './CourseCard';
 import Navbar from './Navbar';
 import Footer from './Footer';
 import About from './About';
+import Courses from './Courses';
 import './style.css';
 import CourseLog from './data/info_course.json';
 import DevLog from './data/G7team.json'
@@ -24,8 +25,9 @@ function App() {
           </Route>
           
           <Route path="/"> 
-            <Filter />
-            <CourseCard courses={CourseLog}/>
+            <Courses courses={CourseLog} />
+            {/* <Filter />
+            <CourseCard courses={CourseLog}/> */}
           </Route>
         </Switch>
 

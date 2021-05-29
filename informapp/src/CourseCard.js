@@ -47,4 +47,11 @@ function CardContent(props) { // <- pass course data as props
   return allCourses;
 }
 
+
+export function GetData(props) {
+  let thing = props.data;
+  return (
+    console.log(thing)
+  );
+}
 export default CourseCard;
