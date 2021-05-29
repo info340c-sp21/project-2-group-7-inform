@@ -8,7 +8,7 @@ import paperPlaneO from '@iconify-icons/fa/paper-plane-o';
 export default function Footer() {
   return(
       <footer>
-      <div className="footer-content fixed-bottom">
+      <div className="footer-content">
         <p className="text-center">Copyright &copy; 2021 Leon & Ian & Catherine & Daniel</p>
         <p className="text-center">
           <Icon icon={paperPlaneO} />
