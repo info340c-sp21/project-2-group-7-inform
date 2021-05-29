@@ -377,6 +377,11 @@ input.search-query:hover {
   color: black;
 }
 
+.developersimg {
+  width: 15rem !important;
+  height: 15rem !important;
+}
+
 @media (min-width: 767px) {
   .course-cards {
     width: 40rem;
@@ -384,11 +389,6 @@ input.search-query:hover {
     margin-top: 1.8rem;
     margin-right: auto;
     margin-left: auto;
-  }
-
-  img {
-    max-width: 70%;
-    max-height: 60%;
   }
 
   .background-image {
@@ -482,12 +482,12 @@ footer {
   background-color: #e9ecef;
 }
 
-img {
+/* img {
   max-width: 70%;
   max-height: 70%;
   margin: 2em;
   margin-bottom: 0.5rem;
-}
+} */
 
 .developers {
   justify-content: center;

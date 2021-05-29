@@ -6,7 +6,14 @@ import { Container, Jumbotron } from 'reactstrap';
 export default function About(props) {
 
   let devCards = props.devs.map(dev => {
-    return <Developers dev={dev} img={dev.img}/>;
+    return (
+      <div className="col-md-6 col-xl-3 d-flex">
+      <div className="row mx-auto my-4">
+        <div className="col-sm-auto col-xl-12">
+        <Developers dev={dev} img={dev.img}/>
+        </div>
+      </div>
+      </div>);
   });
 
   return (
@@ -44,7 +51,7 @@ function Developers(props) {
   return (
     <div className={`${devs.key}-profile col`}>
       <a href={devs.linkedin}>
-        <img src={devs.img} alt={`${devs.key}`}className="rounded-circle shadow"/>
+        <img src={devs.img} alt={`${devs.key}`} className="rounded-circle shadow developersimg"/>
       </a>
       <h2 className="headertwo">{devs.name}</h2>
       <p>{`${devs.year} studying ${devs.major}`}</p>
