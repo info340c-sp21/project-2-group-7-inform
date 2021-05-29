@@ -4,6 +4,18 @@ import React from "react";
 import CourseModal from "./CourseModal";
 
 function CourseCard(props) {
+  let dropdownFilters= props.dropdownSelection;
+  console.log(dropdownFilters);
+
+  let data = props.courses;
+  console.log(data);
+
+  
+
+
+
+
+
   return (
     <div className="text-align-center">
       <div className="container">
@@ -51,4 +63,11 @@ function CardContent(props) { // <- pass course data as props
   return allCourses;
 }
 
+
+export function GetData(props) {
+  let thing = props.data;
+  return (
+    console.log(thing)
+  );
+}
 export default CourseCard;
