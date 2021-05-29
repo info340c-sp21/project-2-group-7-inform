@@ -15,4 +15,3 @@ Our proposed application is a web app that allows Informatics students to view b
 * [Projected and Current Course Time Schedules](https://ischool.uw.edu/programs/informatics/curriculum/course-schedules/info-projected)
 * [Informatics pre-approved course electives](https://canvas.uw.edu/courses/1090264/pages/pre-approved-courses)
 
-![Screenshot of INFOrm](./img/readmeImage.png)
