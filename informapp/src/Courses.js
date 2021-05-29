@@ -19,6 +19,7 @@ function Courses(props) {
     ]); 
     console.log(filteredOffering);
 
+    const courseFilter = {filteredTrack, filteredQuarter, filteredOffering}
     // const courseFilterProps = {filteredTrack, filteredQuarter, filteredOffering, setFilteredTrack, setFilteredQuarter, setFilteredOffering};
 
 
@@ -30,7 +31,7 @@ function Courses(props) {
           setFilteredQuarter={setFilteredQuarter} 
           filteredOffering={filteredOffering} 
           setFilteredOffering={setFilteredOffering}  />
-        <CourseCard courses={props.courses} />  
+        <CourseCard courses={props.courses} dropdownSelection={courseFilter}/>  
       </div>
     );
 }

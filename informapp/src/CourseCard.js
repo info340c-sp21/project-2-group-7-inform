@@ -3,6 +3,18 @@ import "./style.css";
 import React from "react";
 
 function CourseCard(props) {
+  let dropdownFilters= props.dropdownSelection;
+  console.log(dropdownFilters);
+
+  let data = props.courses;
+  console.log(data);
+
+  
+
+
+
+
+
   return (
     <div className="text-align-center">
       <div className="container">
