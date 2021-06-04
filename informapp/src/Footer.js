@@ -11,7 +11,7 @@ export default function Footer() {
       <div className="footer-content">
         <p className="text-center">Copyright &copy; 2021 Leon & Ian & Catherine & Daniel</p>
         <p className="text-center">
-          <Icon icon={paperPlaneO} />
+          <Icon icon={paperPlaneO} /> &nbsp;
           <a href="mailto:leonykan@uw.edu" className="text-white">Contact Us</a>
         </p>
       </div>
