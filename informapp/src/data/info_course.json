@@ -5,7 +5,7 @@
    "CourseNumber": 435,
    "CourseTitle": "Informatics in Healthcare",
    "Track": "BIO",
-   "Quarter": [],
+   "Quarter": ["AU21"],
    "Credit": "none",
    "CourseDescription": "Introduces information technology applied in \nhealthcare across three modules that (1) overview the U.S. healthcare \nsystem, (2) establish an understanding of clinical information systems \nused in healthcare, including electronic health records, and  (3) survey\n applications in clinical informatics, such as virtual health care and \nthe learning health system. Offered: W.",
    "InMajor": "NON-INFO"

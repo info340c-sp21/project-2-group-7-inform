@@ -10,48 +10,52 @@ function CourseCard(props) {
   // let trackSelection = Object.values(courseLogData).filter(oneCourse => oneCourse.Track === "BIO");
   // console.log(trackSelection);
   
-  let selectedCourses = [];
+  let selectedCoursesTrack = [];
+  let selectedCoursesQrt = [];
+  let selectedCoursesINFO = [];
   // loop courses, use each course to find its match in filter options
   for (let oneCourse of courseLogData) {
 
     // loop thru all selected filter options
     for (let oneFilterItem of dropdownFilters.filteredTrack) { // iterate `track` filter
       // check if current course contains in `selectedCourses`
-      if(oneCourse.Track === oneFilterItem && !selectedCourses.includes(oneCourse)) {
-        selectedCourses.push(oneCourse);
+      if(oneCourse.Track === oneFilterItem && !selectedCoursesTrack.includes(oneCourse)) {
+        selectedCoursesTrack.push(oneCourse);
       }
     }
   }
+  console.log("first:", selectedCoursesTrack);
 
-  for (let oneCourse of courseLogData) {
+  for (let oneCourse of selectedCoursesTrack) {
     // loop thru all selected filter options
     for (let oneFilterItem of dropdownFilters.filteredQuarter) { // iterate `quarter` filter
       // check if current course contains in `selectedCourses`
-      if(oneCourse.Quarter.includes(oneFilterItem) && !selectedCourses.includes(oneCourse)) {
-        selectedCourses.push(oneCourse);
+      if(oneCourse.Quarter.includes(oneFilterItem) && !selectedCoursesQrt.includes(oneCourse)) {
+        selectedCoursesQrt.push(oneCourse);
       }
     } // inner for loop
   } // outer for loop
+  console.log("second:", selectedCoursesQrt);
 
-  for (let oneCourse of courseLogData) {
+  for (let oneCourse of selectedCoursesQrt) {
     // loop thru all selected filter options
     for (let oneFilterItem of dropdownFilters.filteredOffering) { // iterate `offering` filter
       // check if current course contains in `selectedCourses`
-      if(oneCourse.InMajor===(oneFilterItem) && !selectedCourses.includes(oneCourse)) {
-        selectedCourses.push(oneCourse);
+      if(oneCourse.InMajor===(oneFilterItem) && !selectedCoursesINFO.includes(oneCourse)) {
+        selectedCoursesINFO.push(oneCourse);
       }
     }
   }
-
+  console.log("third:", selectedCoursesINFO);
 
   // lastly render `selectedCourses` into cards
-  console.log("selected courses", selectedCourses);
+  // console.log("selected courses", selectedCourses);
   
   return (
     <div className="text-align-center">
       <div className="container">
         <div className="card-container row justify-content-md-center">
-          <CardContent courses={selectedCourses}/>
+          <CardContent courses={selectedCoursesINFO}/>
         </div>
       </div>
     </div>
