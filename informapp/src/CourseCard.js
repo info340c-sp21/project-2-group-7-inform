@@ -1,7 +1,7 @@
 // Ian & Leon
 import "./style.css";
 import React from "react";
-// import CourseModal from "./CourseModal"; // Temporarily muted
+import CourseModal from "./CourseModal"; // Temporarily muted
 
 function CourseCard(props) {
   let dropdownFilters = props.dropdownSelection;
@@ -88,10 +88,12 @@ function CardContent(props) { // <- pass course data as props
               <div className="tag">
                 <p>{course.InMajor}</p>
               </div>
+              <div>
+                <CourseModal/>
+              </div>
             </div> {/* end of 2 tags */}
           </div> {/* end of course description */}
         </div>
-        {/* <CourseModal /> need `props` */}
       </>
     );
   })
