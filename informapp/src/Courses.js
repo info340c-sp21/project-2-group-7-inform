@@ -22,13 +22,6 @@ function Courses(props) {
     ]); 
     console.log(filteredOffering);
 
-    // if (filteredTrack.length === 0 && filteredQuarter.length === 0 && filteredOffering.length === 0) {
-    //   setFilteredTrack('HCI');
-    //   setFilteredQuarter('AU21');
-    //   setFilteredOffering('INFO');
-
-    // }
-
     const courseFilter = {filteredTrack, filteredQuarter, filteredOffering}
     // const courseFilterProps = {filteredTrack, filteredQuarter, filteredOffering, setFilteredTrack, setFilteredQuarter, setFilteredOffering};
 
