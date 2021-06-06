@@ -1,7 +1,8 @@
 // Ian & Leon
 import "./style.css";
-import React from "react";
-import CourseModal from "./CourseModal"; // Temporarily muted
+import React, { useState } from "react";
+// import CourseModal from "./CourseModal"; // Temporarily muted
+import { Modal, ModalHeader, ModalBody } from "reactstrap";
 
 function CourseCard(props) {
   let dropdownFilters = props.dropdownSelection;
@@ -63,43 +64,63 @@ function CourseCard(props) {
 }
 
 function CardContent(props) { // <- pass course data as props
+  const [modal, setModal] = useState(false);
+  const toggle = () => setModal(!modal);
+
+  function thing(d) {
+    console.log(`${d.CoursePrefix} ${d.CourseNumber}`);
+  }
+
   let allCourses = props.courses.map((course) => {
     return (
-      <>
-        <div
-          href="#"
-          className="course-cards d-flex align-items-stretch"
-          data-toggle="modal"
-          data-target={`#${course.CoursePrefix}${course.CourseNumber}`}
-        >
-          <div className={`course-name course-image-${course.CourseImage}`}>
-            <div className="course-name-wrap">
-              <h1 className="card-h1">{`${course.CoursePrefix} ${course.CourseNumber}`}</h1>
-            </div>
+      <div
+        className="course-cards d-flex align-items-stretch"
+        data-toggle="modal"
+        onClick={() => {toggle(); thing(course);}}
+        data-target={`#${course.CoursePrefix}${course.CourseNumber}`}
+      >
+        <div className={`course-name course-image-${course.CourseImage}`}>
+          <div className="course-name-wrap">
+            <h1 className="card-h1">{`${course.CoursePrefix} ${course.CourseNumber}`}</h1>
           </div>
-
-          <div className="course-description">
-            <h2 className="headertwo">{course.CourseTitle}</h2>
-
-            <div className="course-tags">
-              <div className="tag">
-                <p>{course.Track}</p>
-              </div>
-              <div className="tag">
-                <p>{course.InMajor}</p>
-              </div>
-              <div>
-                <CourseModal/>
-              </div>
-            </div> {/* end of 2 tags */}
-          </div> {/* end of course description */}
         </div>
-      </>
+        <div className="course-description">
+          <h2 className="headertwo">{course.CourseTitle}</h2>
+          <div className="course-tags">
+            <div className="tag">
+              <p>{course.Track}</p>
+            </div>
+            <div className="tag">
+              <p>{course.InMajor}</p>
+            </div>
+            <div>
+            </div>
+          </div> {/* end of 2 tags */}
+        </div> {/* end of course description */}
+        
+        <Modal isOpen={modal} toggle={toggle}>
+        <ModalHeader toggle={toggle}>{`${course.CoursePrefix} ${course.CourseNumber} ${course.CourseTitle}`}</ModalHeader>
+        <ModalBody>
+        {course.CourseDescription}
+        </ModalBody>
+        </Modal>      
+      </div>
+      
     );
   })
   return allCourses;
 }
 
+// function CardModal (props) {
+//   return(
+//     <Modal isOpen={props.modalDisplay} toggle={props.clickEvent}>
+//     <ModalHeader toggle={props.clickEvent}>{`${props.courseInfo.CoursePrefix} ${props.courseInfo.CourseNumber} ${props.courseInfo.CourseTitle}`}</ModalHeader>
+//     <ModalBody>
+//       {props.courseInfo.CourseDescription}
+//     </ModalBody>
+//     </Modal>
+//   );
+// }
 
 export function GetData(props) {
   let thing = props.data;
