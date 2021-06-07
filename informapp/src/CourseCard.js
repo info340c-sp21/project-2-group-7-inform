@@ -147,20 +147,20 @@ function CardContent(props) { // <- pass course data as props
 function CardModal (props) {
   return(
     <Modal isOpen={props.modalDisplay} toggle={props.clickEvent} centered={true}>
-    <ModalHeader className="headerone" toggle={props.clickEvent}>{props.header}</ModalHeader>
-    <ModalBody className="p">
-      {props.content}
-    </ModalBody>
-    <ModalFooter>
-    <div className="course-tags">
-      <div className="tag">
-        <p>{props.track}</p>
+      <ModalHeader className="headerone modal-header" toggle={props.clickEvent}>{props.header}</ModalHeader>
+      <ModalBody className="p">
+        {props.content}
+      </ModalBody>
+      <ModalFooter>
+      <div className="course-tags">
+        <div className="tag">
+          <p>{props.track}</p>
+        </div>
+        <div className="tag">
+          <p>{props.major}</p>
+        </div>
       </div>
-      <div className="tag">
-        <p>{props.major}</p>
-      </div>
-    </div>
-    </ModalFooter>
+      </ModalFooter>
     </Modal>  
   );
 }

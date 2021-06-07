@@ -60,7 +60,7 @@
    "CourseNumber": 430,
    "CourseTitle": "Database Design & Management",
    "Track": "DS",
-   "Quarter": ["AU21", "SP22"],
+   "Quarter": ["AU21", "SPR22"],
    "Credit": "none",
    "CourseDescription": "Perspectives on DBMS theory, architecture, and \nimplementation. Conceptual, logical, physical modeling. Index \nstructures, query optimization and performance tuning, relational \nalgebra, transaction processing, and concurrency control. Operational \ndatabases, decision support systems, and data warehousing. Projects in \ndatabase implementation and integration. Social implications of large \ndistributed database systems. Prerequisite: INFO 330.",
    "InMajor": "INFO"
