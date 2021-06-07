@@ -138,7 +138,7 @@ function CardContent(props) { // <- pass course data as props
           </div> {/* end of course description */}
         </div>
       ))}
-      {modal == true ? <CardModal modalDisplay={modal} clickEvent={toggle} header={modalHeader.e} content={modalContent.e} track={modalTrack.e} major={modalMajor.e}/> : ''}
+      {modal === true ? <CardModal modalDisplay={modal} clickEvent={toggle} header={modalHeader.e} content={modalContent.e} track={modalTrack.e} major={modalMajor.e}/> : ''}
       </>
     )
 }
