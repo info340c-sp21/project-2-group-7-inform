@@ -5,17 +5,20 @@ import CourseCard from './CourseCard';
 
 function Courses(props) {
     const [filteredTrack, setFilteredTrack] = useState([
-        'BIO', 'DS', 'HCI', 'IA', 'IAC'
+    // 'BIO', 'DS', 'HCI', 'IA', 'IAC'
+      'HCI', 'DS'
     ]);
     console.log(filteredTrack);
 
     const [filteredQuarter, setFilteredQuarter] = useState([
-    'SU21', 'AU21','WI22', 'SP22'
+    // 'SU21', 'AU21','WI22', 'SP22'
+      'AU21'
     ]);
     console.log(filteredQuarter);
 
     const [filteredOffering, setFilteredOffering] = useState([
-    'INFO', 'NON-INFO'
+    // 'INFO', 'NON-INFO'
+      'INFO'
     ]); 
     console.log(filteredOffering);
 

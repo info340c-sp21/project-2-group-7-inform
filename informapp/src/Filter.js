@@ -117,7 +117,10 @@ function Checkboxes (props) {
 
     <li onClick={toggleSelection} className="checkbox-menu">
       <label aria-label={props.entryName}>
-        <input type="checkbox" checked={props.selectedKeys.indexOf(props.entryKey) !== -1} onChange={toggleSelection} aria-label={props.entryName} />
+        <input type="checkbox" 
+                checked={props.selectedKeys.indexOf(props.entryKey) !== -1} 
+                onChange={toggleSelection} 
+                aria-label={props.entryName} />
         {props.entryName}
       </label>
     </li>

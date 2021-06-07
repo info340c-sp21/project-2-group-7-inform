@@ -30,7 +30,7 @@ function App() {
               <div className="text-align-center">
                 <Courses courses={CourseLog} />
               </div>
-              {/* <Filter />
+              {/* <Filter /> 
               <CourseCard courses={CourseLog}/> */}
             </Route>
           </Switch>
