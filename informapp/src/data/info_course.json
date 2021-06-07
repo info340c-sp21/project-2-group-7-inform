@@ -1,5 +1,16 @@
 [
- {
+  {
+    "CoursePrefix": "BIME",
+    "CourseImage": "bio",
+    "CourseNumber": 300,
+    "CourseTitle": "Transformational Technologies For Biology, Medicine, And Health",
+    "Track": "BIO",
+    "Quarter": ["AU21"],
+    "Credit": "none",
+    "CourseDescription": "An introduction to Biomedical and Health Informatics through three modules focusing on current technologies: (1) Electronic Health Records (EHRs), (2) data mining the EHR, and (3) translational bioinformatics and personalized medicine. Each module includes primary literature readings, and hands-on team projects that explore the technologies involved.",
+    "InMajor": "NON-INFO"
+  },
+  {
    "CoursePrefix": "BIME",
    "CourseImage": "bio",
    "CourseNumber": 435,
@@ -66,6 +77,105 @@
    "InMajor": "INFO"
  },
  {
+  "CoursePrefix": "AMATH",
+  "CourseImage": "ds",
+  "CourseNumber": 301,
+  "CourseTitle": "Beginning Scientific Computing",
+  "Track": "DS",
+  "Quarter": ["SU21", "AU21"],
+  "Credit": "none",
+  "CourseDescription": "Introduction to the use of computers to solve problems arising in the physical, biological, and engineering sciences. Application of mathematical judgment, programming architecture, and flow control in solving scientific problems. Introduction to MATLAB and Python routines for numerical programming, computation, and visualization.",
+  "InMajor": "NON-INFO"
+ },
+ {
+  "CoursePrefix": "AMATH",
+  "CourseImage": "ds",
+  "CourseNumber": 383,
+  "CourseTitle": "Introduction to Continuous Mathematical Modeling",
+  "Track": "DS",
+  "Quarter": ["SU21", "AU21"],
+  "Credit": "none",
+  "CourseDescription": "Introductory survey of applied mathematics with emphasis on modeling of physical and biological problems in terms of differential equations. Formulation, solution, and interpretation of the results.",
+  "InMajor": "NON-INFO"
+ },
+ {
+  "CoursePrefix": "CSE",
+  "CourseImage": "ds",
+  "CourseNumber": 414,
+  "CourseTitle": "Introduction to Database Systems",
+  "Track": "DS",
+  "Quarter": ["AU21"],
+  "Credit": "none",
+  "CourseDescription": "Introduces database management systems and writing applications that use such systems; data models, query languages, transactions, database tuning, data warehousing, and parallelism. Intended for non-majors. Not open for credit to students who have completed CSE344.",
+  "InMajor": "NON-INFO"
+ },
+ {
+  "CoursePrefix": "CSE",
+  "CourseImage": "ds",
+  "CourseNumber": 416,
+  "CourseTitle": "Introduction to Machine Learning",
+  "Track": "DS",
+  "Quarter": ["AU21"],
+  "Credit": "none",
+  "CourseDescription": "Provides practical introduction to machines learning. Modules include regression, classification, clustering, retrieval, recommender systems, and deep learning, with a focus on an intuitive understanding grounded in real-world applications. Intelligent applications are designed and used to make predictions on large, complex datasets.",
+  "InMajor": "NON-INFO"
+ },
+ {
+  "CoursePrefix": "CSE",
+  "CourseImage": "ds",
+  "CourseNumber": 446,
+  "CourseTitle": "Machine Learning",
+  "Track": "DS",
+  "Quarter": ["AU21"],
+  "Credit": "none",
+  "CourseDescription": "Methods for designing systems that learn from data and improve with experience. Supervised learning and predictive modeling: decision trees, rule induction, nearest neighbors, Bayesian methods, neural networks, support vector machines, and model ensembles. Unsupervised learning and clustering.",
+  "InMajor": "NON-INFO"
+ },
+ {
+  "CoursePrefix": "ECON",
+  "CourseImage": "ds",
+  "CourseNumber": 482,
+  "CourseTitle": "Econometric Theory And Practice",
+  "Track": "DS",
+  "Quarter": ["AU21"],
+  "Credit": "none",
+  "CourseDescription": "Applies statistical modeling to empirical work in economics. Focuses on regression analysis; derivations of regression estimators and their properties; and applied computer work in estimating multiple regression models.",
+  "InMajor": "NON-INFO"
+ },
+ {
+  "CoursePrefix": "MATH",
+  "CourseImage": "ds",
+  "CourseNumber": 308,
+  "CourseTitle": "Matrix Algebra With Applications",
+  "Track": "DS",
+  "Quarter": ["SU21"],
+  "Credit": "none",
+  "CourseDescription": "Systems of linear equations, vector spaces, matrices, subspaces, orthogonality, least squares, eigenvalues, eigenvectors, applications. For students in engineering, mathematics, and the sciences.",
+  "InMajor": "NON-INFO"
+ },
+ {
+  "CoursePrefix": "MATH",
+  "CourseImage": "ds",
+  "CourseNumber": 380,
+  "CourseTitle": "Intermediate Topics In Undergraduate Mathematics",
+  "Track": "DS",
+  "Quarter": ["AU21"],
+  "Credit": "none",
+  "CourseDescription": "Covers intermediate topics in undergraduate mathematics.",
+  "InMajor": "NON-INFO"
+ },
+ {
+  "CoursePrefix": "PSYCH",
+  "CourseImage": "ds",
+  "CourseNumber": 331,
+  "CourseTitle": "Laboratory In Human Cognition",
+  "Track": "DS",
+  "Quarter": ["AU21"],
+  "Credit": "none",
+  "CourseDescription": "Selected aspects of human cognition, perception, and performance.",
+  "InMajor": "NON-INFO"
+ },
+ {
    "CoursePrefix": "INFO",
    "CourseImage": "hci",
    "CourseNumber": 362,
@@ -75,6 +185,17 @@
    "Credit": "VLPA",
    "CourseDescription": "Build fluency in expressing information visually as \ndiagrams, charts, maps, and icons. Learn to solve design problems, give \nand receive critique, follow an iterative process of design refinement, \nand learn technical skills. Understand the nature of visual potential, \nvisual design principles, and the impact of color and typography.",
    "InMajor": "INFO"
+ },
+ {
+  "CoursePrefix": "CSE",
+  "CourseImage": "hci",
+  "CourseNumber": 442,
+  "CourseTitle": "Data Visualization",
+  "Track": "HCI",
+  "Quarter": ["AU21"],
+  "Credit": "none",
+  "CourseDescription": "Techniques for creating effective visualizations of data based on principles from graphic design, perceptual psychology, and statistics. Topics include visual encoding models, exploratory data analysis, visualization software, interaction techniques, graphical perception, color, animation, high-dimensional data, cartography, network visualization, and text visualization.",
+  "InMajor": "NON-INFO"
  },
  {
    "CoursePrefix": "INFO",
@@ -97,6 +218,39 @@
    "Credit": "VLPA, QSR",
    "CourseDescription": "Techniques and theory for visualizing, analyzing, and \nsupporting interaction with structured data like numbers, text, and \nrelations. Provides practical experience designing and building \ninteractive visualizations for the web. Exposes students to cognitive \nscience, statistics, and perceptual psychology. An empirical approach \nwill be used to design and evaluate visualizations. Prerequisite: INFO \n340 or CSE 154; CSE 143 or CSE 163; and either QMETH 201, Q SCI 381, \nSTAT 220, STAT 221/CS&SS 221/SOC 221, STAT 290, STAT 311, or STAT \n390.",
    "InMajor": "INFO"
+ },
+ {
+  "CoursePrefix": "CSE",
+  "CourseImage": "hci",
+  "CourseNumber": 440,
+  "CourseTitle": "Introduction To HCI: User Interface Design, Prototyping, And Evaluation",
+  "Track": "HCI",
+  "Quarter": ["AU21"],
+  "Credit": "none",
+  "CourseDescription": "Human-Computer Interaction (HCI) theory and techniques. Methods for designing, prototyping, and evaluating user interfaces to computing applications. Human capabilities, interface technology, interface design methods, and interface evaluation tools and techniques.",
+  "InMajor": "NON-INFO"
+ },
+ {
+  "CoursePrefix": "INFO",
+  "CourseImage": "hci",
+  "CourseNumber": 442,
+  "CourseTitle": "Cooperative Software Development",
+  "Track": "HCI",
+  "Quarter": ["AU21"],
+  "Credit": "none",
+  "CourseDescription": "Introduces the theory and practice of cooperative user-centered software development, applying fundamental theories and techniques from social psychology, computer-supported collaborative work, and software engineering.",
+  "InMajor": "NON-INFO"
+ },
+ {
+  "CoursePrefix": "INFO",
+  "CourseImage": "hci",
+  "CourseNumber": 466,
+  "CourseTitle": "Moral Reasoning And Interaction Design",
+  "Track": "HCI",
+  "Quarter": ["AU21"],
+  "Credit": "none",
+  "CourseDescription": "What does it mean for a technology to be good or evil? Students learn about and critique existing design patterns, features, and products through a diverse set of ethical theories, and they design new technologies grounded in systematic principles of moral reasoning. Mix of studio and seminar.",
+  "InMajor": "INFO"
  },
  {
    "CoursePrefix": "INFO",
@@ -185,5 +339,17 @@
    "Credit": "none",
    "CourseDescription": "Explores emerging topics and unique subjects in \ninformation assurance and cybersecurity (IAC) not otherwise covered in \nthe IAC curriculum.",
    "InMajor": "INFO"
+ },
+ {
+  "CoursePrefix": "CSE",
+  "CourseImage": "iac",
+  "CourseNumber": 484,
+  "CourseTitle": "Computer Security",
+  "Track": "IAC",
+  "Quarter": ["AU21"],
+  "Credit": "none",
+  "CourseDescription": "Foundations of modern computer security, including software security, operating system security, network security, applied cryptography, human factors, authentication, anonymity, and web security.",
+  "InMajor": "NON-INFO"
  }
+
 ]
