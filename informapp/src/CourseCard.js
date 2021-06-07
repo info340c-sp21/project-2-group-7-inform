@@ -2,7 +2,7 @@
 import "./style.css";
 import React, { useState } from "react";
 // import CourseModal from "./CourseModal"; // Temporarily muted
-import { Modal, ModalHeader, ModalBody } from "reactstrap";
+import { Modal, ModalHeader, ModalBody, ModalFooter } from "reactstrap";
 
 function CourseCard(props) {
   let dropdownFilters = props.dropdownSelection;
@@ -64,63 +64,128 @@ function CourseCard(props) {
 }
 
 function CardContent(props) { // <- pass course data as props
-  const [modal, setModal] = useState(false);
+  const [modal, setModal] = useState(false);  
+  const [modalHeader, setModalHeader] = useState('');
+  const [modalContent, setModalContent] = useState('');
+  const [modalTrack, setModalTrack] = useState ('');
+  const [modalMajor, setModalMajor] = useState ('');
+
   const toggle = () => setModal(!modal);
 
-  function thing(d) {
-    console.log(`${d.CoursePrefix} ${d.CourseNumber}`);
-  }
+  const updateModalHeader = (e) => {
+    setModalHeader({
+      ...modalHeader,
+      e
+    });
+  };
 
-  let allCourses = props.courses.map((course) => {
-    return (
-      <div
-        className="course-cards d-flex align-items-stretch"
-        data-toggle="modal"
-        onClick={() => {toggle(); thing(course);}}
-        data-target={`#${course.CoursePrefix}${course.CourseNumber}`}
-      >
-        <div className={`course-name course-image-${course.CourseImage}`}>
-          <div className="course-name-wrap">
-            <h1 className="card-h1">{`${course.CoursePrefix} ${course.CourseNumber}`}</h1>
+  const updateModalContent = (e) => {
+    setModalContent({
+      ...modalContent,
+      e
+    });
+  };
+
+  const updateModalTrack = (e) => {
+    setModalTrack({
+      ...modalTrack,
+      e
+    });
+  };
+
+  const updateModalMajor = (e) => {
+    setModalMajor({
+      ...modalMajor,
+      e
+    });
+  };
+
+  // function thing(d) {
+  //   console.log(`${d.CoursePrefix} ${d.CourseNumber}`);
+  // }
+
+    return (    
+      <> 
+      {props.courses.map((course) => (
+        <div
+          className="course-cards d-flex align-items-stretch"
+          data-toggle="modal"
+          value={course.CoursePrefix}
+          name="prefix"
+          onClick={() => {toggle(); 
+                          updateModalHeader(`${course.CoursePrefix}${course.CourseNumber} ${course.CourseTitle}`);
+                          updateModalContent(`${course.CourseDescription}`); 
+                          updateModalMajor(`${course.InMajor}`); 
+                          updateModalTrack(`${course.Track}`)}}
+          data-target={`#${course.CoursePrefix}${course.CourseNumber}`}
+        >
+          <div className={`course-name course-image-${course.CourseImage}`}>
+            <div className="course-name-wrap">
+              <h1 className="card-h1">{`${course.CoursePrefix} ${course.CourseNumber}`}</h1>
+            </div>
           </div>
+          <div className="course-description">
+            <h2 className="headertwo">{course.CourseTitle}</h2>
+            <div className="course-tags">
+              <div className="tag">
+                <p>{course.Track}</p>
+              </div>
+              <div className="tag">
+                <p>{course.InMajor}</p>
+              </div>
+              <div>
+              </div>
+            </div> {/* end of 2 tags */}
+          </div> {/* end of course description */}
         </div>
-        <div className="course-description">
-          <h2 className="headertwo">{course.CourseTitle}</h2>
-          <div className="course-tags">
-            <div className="tag">
-              <p>{course.Track}</p>
-            </div>
-            <div className="tag">
-              <p>{course.InMajor}</p>
-            </div>
-            <div>
-            </div>
-          </div> {/* end of 2 tags */}
-        </div> {/* end of course description */}
-        
-        <Modal isOpen={modal} toggle={toggle}>
-        <ModalHeader toggle={toggle}>{`${course.CoursePrefix} ${course.CourseNumber} ${course.CourseTitle}`}</ModalHeader>
-        <ModalBody>
-        {course.CourseDescription}
-        </ModalBody>
-        </Modal>      
-      </div>
-      
-    );
-  })
-  return allCourses;
+      ))}
+      {modal == true ? <CardModal modalDisplay={modal} clickEvent={toggle} header={modalHeader.e} content={modalContent.e} track={modalTrack.e} major={modalMajor.e}/> : ''}
+      </>
+    )
+
+  // })
+  // return allCourses;
 }
 
-// function CardModal (props) {
-//   return(
-//     <Modal isOpen={props.modalDisplay} toggle={props.clickEvent}>
-//     <ModalHeader toggle={props.clickEvent}>{`${props.courseInfo.CoursePrefix} ${props.courseInfo.CourseNumber} ${props.courseInfo.CourseTitle}`}</ModalHeader>
-//     <ModalBody>
-//       {props.courseInfo.CourseDescription}
-//     </ModalBody>
-//     </Modal>
-//   );
-// }
+/* <Modal isOpen={modal} toggle={updateModalContent}>
+<ModalHeader toggle={updateModalContent}>{`hi`}</ModalHeader>
+<ModalBody>
+{modalContent.e}
+</ModalBody>
+</Modal>   */
+// {/* <Modal isOpen={modal} toggle={toggle}>
+// <ModalHeader toggle={toggle}>{`${course.CoursePrefix} ${course.CourseNumber} ${course.CourseTitle}`}</ModalHeader>
+// <ModalBody>
+// {course.CourseDescription}
+// </ModalBody>
+// </Modal>   */}
+
+function CardModal (props) {
+  return(
+    // <Modal isOpen={props.modalDisplay} toggle={props.clickEvent}>
+    // <ModalHeader toggle={props.clickEvent}>{`${props.courseInfo.CoursePrefix} ${props.courseInfo.CourseNumber} ${props.courseInfo.CourseTitle}`}</ModalHeader>
+    // <ModalBody>
+    //   {props.courseInfo.CourseDescription}
+    // </ModalBody>
+    // </Modal>
+    <Modal isOpen={props.modalDisplay} toggle={props.clickEvent} centered={true}>
+    <ModalHeader className="headerone" toggle={props.clickEvent}>{props.header}</ModalHeader>
+    <ModalBody className="p">
+    {props.content}
+    </ModalBody>
+    <ModalFooter>
+    <div className="course-tags">
+      <div className="tag">
+        <p>{props.track}</p>
+      </div>
+      <div className="tag">
+        <p>{props.major}</p>
+      </div>
+    </div>
+    </ModalFooter>
+    </Modal>  
+  );
+}
 
 export function GetData(props) {
   let thing = props.data;
