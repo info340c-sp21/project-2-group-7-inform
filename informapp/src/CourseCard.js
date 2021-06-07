@@ -142,36 +142,14 @@ function CardContent(props) { // <- pass course data as props
       {modal == true ? <CardModal modalDisplay={modal} clickEvent={toggle} header={modalHeader.e} content={modalContent.e} track={modalTrack.e} major={modalMajor.e}/> : ''}
       </>
     )
-
-  // })
-  // return allCourses;
 }
-
-/* <Modal isOpen={modal} toggle={updateModalContent}>
-<ModalHeader toggle={updateModalContent}>{`hi`}</ModalHeader>
-<ModalBody>
-{modalContent.e}
-</ModalBody>
-</Modal>   */
-// {/* <Modal isOpen={modal} toggle={toggle}>
-// <ModalHeader toggle={toggle}>{`${course.CoursePrefix} ${course.CourseNumber} ${course.CourseTitle}`}</ModalHeader>
-// <ModalBody>
-// {course.CourseDescription}
-// </ModalBody>
-// </Modal>   */}
 
 function CardModal (props) {
   return(
-    // <Modal isOpen={props.modalDisplay} toggle={props.clickEvent}>
-    // <ModalHeader toggle={props.clickEvent}>{`${props.courseInfo.CoursePrefix} ${props.courseInfo.CourseNumber} ${props.courseInfo.CourseTitle}`}</ModalHeader>
-    // <ModalBody>
-    //   {props.courseInfo.CourseDescription}
-    // </ModalBody>
-    // </Modal>
     <Modal isOpen={props.modalDisplay} toggle={props.clickEvent} centered={true}>
     <ModalHeader className="headerone" toggle={props.clickEvent}>{props.header}</ModalHeader>
     <ModalBody className="p">
-    {props.content}
+      {props.content}
     </ModalBody>
     <ModalFooter>
     <div className="course-tags">
