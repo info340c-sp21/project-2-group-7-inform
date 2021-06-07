@@ -15,7 +15,6 @@ function CourseCard(props) {
   let selectedCoursesINFO = [];
   // loop courses, use each course to find its match in filter options
   for (let oneCourse of courseLogData) {
-
     // loop thru all selected filter options
     for (let oneFilterItem of dropdownFilters.filteredTrack) { // iterate `track` filter
       // check if current course contains in `selectedCourses`
