@@ -13,7 +13,7 @@ import {
 } from 'reactstrap';
 
 
-export default function InfoNavbar() {
+export default function InfoNavbar(props) {
   const [isOpen, setIsOpen] = useState(false); 
   const toggle = () => setIsOpen(!isOpen);
   return(
@@ -24,12 +24,19 @@ export default function InfoNavbar() {
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
             <NavItem>
-              <Link to="/" className="nav-link" >Courses</Link>
+              <Link to="/" className="nav-link">Courses</Link>
+            </NavItem>
+            <NavItem>
+              <Link to="/mycourses" className="nav-link">My Courses</Link>
             </NavItem>
             <NavItem>
               <Link to='/about' className="nav-link">About</Link>
             </NavItem>
+            <NavItem className="marginleft-auto">
+              <Link className="btn btn-secondary" onClick={props.event}>Log Out {props.user}</Link>
+            </NavItem>
           </Nav>
+
         </Collapse>
       </Navbar>
       <Switch>
