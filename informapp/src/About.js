@@ -34,7 +34,7 @@ export default function About(props) {
         <div className="developers">
         &nbsp;
           <h1 className="align-items-start headerone">INFOrm Team</h1>
-          <div className="row justify-content-md-center text-align-center">
+          <div className="row justify-content-md-center text-align-center footer-bottom">
             {devCards}
           </div>
         </div>

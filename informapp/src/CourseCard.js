@@ -2,7 +2,8 @@
 import "./style.css";
 import React, { useState } from "react";
 // import CourseModal from "./CourseModal"; // Temporarily muted
-import { Modal, ModalHeader, ModalBody, ModalFooter } from "reactstrap";
+import { Modal, ModalHeader, ModalBody, ModalFooter, Button } from "reactstrap";
+import firebase from 'firebase';
 
 function CourseCard(props) {
   let dropdownFilters = props.dropdownSelection;
@@ -54,7 +55,7 @@ function CourseCard(props) {
   return (
     <div className="text-align-center">
       <div className="container">
-        <div className="card-container row justify-content-md-center">
+        <div className="card-container row justify-content-md-center footer-bottom">
           <CardContent courses={selectedCoursesINFO}/>
         </div>
       </div>
@@ -68,6 +69,9 @@ function CardContent(props) { // <- pass course data as props
   const [modalContent, setModalContent] = useState('');
   const [modalTrack, setModalTrack] = useState ('');
   const [modalMajor, setModalMajor] = useState ('');
+  const [modalPrefix, setModalPrefix] = useState ('');
+  const [modalImg, setModalImg] = useState ('');
+  const [modalName, setModalName] = useState('');
 
   const toggle = () => setModal(!modal);
 
@@ -99,6 +103,27 @@ function CardContent(props) { // <- pass course data as props
     });
   };
 
+  const updateModalPrefix = (e) => {
+    setModalPrefix({
+      ...modalPrefix,
+      e
+    });
+  };
+
+  const updateModalImg = (e) => {
+    setModalImg({
+      ...modalImg,
+      e
+    });
+  };
+
+  const updateModalName = (e) => {
+    setModalName({
+      ...modalName,
+      e
+    });
+  };
+
   // function thing(d) {
   //   console.log(`${d.CoursePrefix} ${d.CourseNumber}`);
   // }
@@ -115,7 +140,11 @@ function CardContent(props) { // <- pass course data as props
                           updateModalHeader(`${course.CoursePrefix}${course.CourseNumber} ${course.CourseTitle}`);
                           updateModalContent(`${course.CourseDescription}`); 
                           updateModalMajor(`${course.InMajor}`); 
-                          updateModalTrack(`${course.Track}`)}}
+                          updateModalTrack(`${course.Track}`);
+                          updateModalPrefix(`${course.CoursePrefix} ${course.CourseNumber}`);
+                          updateModalImg(`${course.CourseImage}`);
+                          updateModalName(`${course.CourseTitle}`)
+                        }}
           data-target={`#${course.CoursePrefix}${course.CourseNumber}`}
         >
           <div className={`course-name course-image-${course.CourseImage}`}>
@@ -132,18 +161,40 @@ function CardContent(props) { // <- pass course data as props
               <div className="tag">
                 <p>{course.InMajor}</p>
               </div>
-              <div>
-              </div>
+                {/* ADD A BUTTON TO ADD COURSE HERE */}
             </div> {/* end of 2 tags */}
           </div> {/* end of course description */}
         </div>
       ))}
-      {modal === true ? <CardModal modalDisplay={modal} clickEvent={toggle} header={modalHeader.e} content={modalContent.e} track={modalTrack.e} major={modalMajor.e}/> : ''}
+      {modal === true ? <CardModal modalDisplay={modal} clickEvent={toggle} prefix={modalPrefix.e} img={modalImg.e} name={modalName.e} header={modalHeader.e} content={modalContent.e} track={modalTrack.e} major={modalMajor.e}/> : ''}
       </>
     )
 }
 
 function CardModal (props) {
+  const [modal, setModal] = useState(false);  
+  const toggle = () => setModal(!modal);
+  
+  // add a new course to the database
+  const addCourse = (event) => {
+
+    let user = firebase.auth().currentUser.displayName;
+    // adding a user's added course to the database
+    const newAddedCourse = {
+      coursePre: props.prefix,
+      major: props.major,
+      header: props.name,
+      description: props.content,
+      track: props.track,
+      image: props.img,
+      userID: user
+    }
+
+    const mycoursesRef = firebase.database().ref('mycourses')
+
+    mycoursesRef.push(newAddedCourse);
+  }
+
   return(
     <Modal isOpen={props.modalDisplay} toggle={props.clickEvent} centered={true}>
       <ModalHeader className="headerone modal-header" toggle={props.clickEvent}>{props.header}</ModalHeader>
@@ -158,10 +209,25 @@ function CardModal (props) {
         <div className="tag">
           <p>{props.major}</p>
         </div>
+        <Button onClick={() => {toggle(); addCourse();}} className="tag">
+          <p>Add Course</p>
+        </Button>
+        <SuccessModal modalDisplay={modal} modalToggle={toggle} courseName={props.header}/>
       </div>
       </ModalFooter>
     </Modal>  
   );
+}
+
+function SuccessModal (props) {
+  
+  return(
+    <Modal isOpen={props.modalDisplay} toggle={props.modalToggle} centered={true}>
+      <ModalBody>
+        <p>Successfully added <b>{props.courseName}</b> to your list!</p>
+      </ModalBody>
+    </Modal>
+  )
 }
 
 export function GetData(props) {

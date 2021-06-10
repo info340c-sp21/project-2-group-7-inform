@@ -14,6 +14,10 @@ body {
   border-radius: 15px !important;
 }
 
+.marginleft-auto{
+  margin-left: auto !important;
+}
+
 .btn-outline-primary {
   color: #fff !important;
   border-color: #4b2e83 !important;
@@ -492,6 +496,10 @@ footer {
 
 .footer-content {
   padding-top: 1rem;
+}
+
+.footer-bottom {
+  padding-bottom: 15vh;
 }
 
 /* PAGE 2 ABOUT */
