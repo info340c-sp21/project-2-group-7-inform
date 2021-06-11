@@ -1,14 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
-import firebase from 'firebase';
-import 'firebase/auth'; 
+import firebase from 'firebase/app';
+import 'firebase/auth';
 import 'firebase/database';
 
 //import bootstrap style & style css
 import './style.css';
 import 'bootstrap/dist/css/bootstrap.css';
 
+// firebase web app initialization
 const firebaseConfig = {
   apiKey: "AIzaSyCitttVZ-uDOMbjXAVlpGdVNxWngPEBtIg",
   authDomain: "inform-8c49f.firebaseapp.com",

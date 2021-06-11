@@ -1,6 +1,4 @@
-// Daniel & Catherine
-
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import './style.css'
 import { Switch, Route, Link } from "react-router-dom";
 import {
@@ -12,11 +10,11 @@ import {
   NavItem
 } from 'reactstrap';
 
-
+// navbar development and interactivity
 export default function InfoNavbar(props) {
-  const [isOpen, setIsOpen] = useState(false); 
+  const [isOpen, setIsOpen] = useState(false);
   const toggle = () => setIsOpen(!isOpen);
-  return(
+  return (
     <div>
       <Navbar className="navbar-default navbar-brand" light expand="md">
         <NavbarBrand className="navbar-brand text-white">INFOrm</NavbarBrand>

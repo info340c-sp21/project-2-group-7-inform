@@ -1,14 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { Container, Jumbotron, Button, Modal, ModalBody } from 'reactstrap';
-import firebase from 'firebase/app'
+import firebase from 'firebase'
 
 export default function MyCourses(props) {
 	const [myCourses, setMyCourses] = useState([]);
 	const [tempCourses, setTempCourse] = useState([]);
 	const [modal, setModal] = useState(false);
 	const toggle = () => setModal(!modal);
-
-	
 
 	useEffect(() => {
 		let user = firebase.auth().currentUser.displayName;
@@ -22,14 +20,11 @@ export default function MyCourses(props) {
 					singleCourseObj.key = key
 					return singleCourseObj;
 				})
-				
 				setMyCourses(courseArray);
 			}
 		})
 	}, [])
 
-	// let myCourseItems = [];
-	// return <myCourseItem key={myCourseObj.key} course={myCourseObj} currentUser={props.currentUser} />;
 	return (
 		<>
 			<div className="about">
@@ -42,7 +37,7 @@ export default function MyCourses(props) {
 					</Container>
 				</Jumbotron>
 			</div>
-			<div className="text-align-center"> 
+			<div className="text-align-center">
 				<div className="container">
 					<div className="card-container row justify-content-md-center footer-bottom">
 						{myCourses.length === 0 ? console.log("TEST") : myCourses.map((myCourseObj) => (
@@ -68,15 +63,15 @@ export default function MyCourses(props) {
 										<div className="tag">
 											<p>{myCourseObj.major}</p>
 										</div>
-										<Button onClick={() => {window.open(myCourseObj.url, "_blank")}} className="tag">
-											<p> Visit UW Course Page </p> 
+										<Button onClick={() => { window.open(myCourseObj.url, "_blank") }} className="tag">
+											<p> Visit UW Course Page </p>
 										</Button>
 										<Button className="tag" onClick={() => { toggle(); RemoveCourse(myCourseObj); setTempCourse(myCourseObj); reloadPage(); }}>
 											<p>Remove Course</p>
 										</Button>
 										{modal === true ? <RemoveModal modalDisplay={modal} modalToggle={toggle} courseName={tempCourses.header} myCourseArray={myCourses} /> : ''}
-									</div> 
-								</div> 
+									</div>
+								</div>
 							</div>
 						))}
 					</div>
@@ -89,7 +84,7 @@ export default function MyCourses(props) {
 function reloadPage() {
 	window.location.reload();
 	return (
-		<div className = "text-center">
+		<div className="text-center">
 			<i className="fa fa-spinner fa-spin fa-3x" aria-label="Connecting..."></i>
 		</div>
 	)
@@ -113,7 +108,7 @@ function RemoveCourse(singleCourse) {
 		if (courseObj != null) {
 			let objectKeyArrays = Object.keys(courseObj)
 			objectKeyArrays.map((key) => {
-				if(singleCourse.key === key) {
+				if (singleCourse.key === key) {
 					coursesRef.child(key).remove();
 				}
 				return coursesRef;

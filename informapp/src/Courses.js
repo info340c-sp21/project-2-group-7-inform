@@ -1,42 +1,37 @@
-// Ian and Leon
 import React, { useState } from "react";
 import Filter from './Filter';
 import CourseCard from './CourseCard';
 
 function Courses(props) {
-    const [filteredTrack, setFilteredTrack] = useState([
+  const [filteredTrack, setFilteredTrack] = useState([
     // 'BIO', 'DS', 'HCI', 'IA', 'IAC'
-      'HCI', 'DS'
-    ]);
-    console.log(filteredTrack);
+    'HCI', 'DS'
+  ]);
 
-    const [filteredQuarter, setFilteredQuarter] = useState([
+  const [filteredQuarter, setFilteredQuarter] = useState([
     // 'SU21', 'AU21','WI22', 'SP22'
-      'AU21'
-    ]);
-    console.log(filteredQuarter);
+    'AU21'
+  ]);
 
-    const [filteredOffering, setFilteredOffering] = useState([
+  const [filteredOffering, setFilteredOffering] = useState([
     // 'INFO', 'NON-INFO'
-      'INFO'
-    ]); 
-    console.log(filteredOffering);
+    'INFO'
+  ]);
 
-    const courseFilter = {filteredTrack, filteredQuarter, filteredOffering}
-    // const courseFilterProps = {filteredTrack, filteredQuarter, filteredOffering, setFilteredTrack, setFilteredQuarter, setFilteredOffering};
+  const courseFilter = { filteredTrack, filteredQuarter, filteredOffering }
+  // const courseFilterProps = {filteredTrack, filteredQuarter, filteredOffering, setFilteredTrack, setFilteredQuarter, setFilteredOffering};
 
-
-    return(
-      <div>
-        <Filter filteredTrack={filteredTrack} 
-          setFilteredTrack={setFilteredTrack} 
-          filteredQuarter={filteredQuarter}
-          setFilteredQuarter={setFilteredQuarter} 
-          filteredOffering={filteredOffering} 
-          setFilteredOffering={setFilteredOffering}  />
-        <CourseCard courses={props.courses} dropdownSelection={courseFilter}/>  
-      </div>
-    );
+  return (
+    <div>
+      <Filter filteredTrack={filteredTrack}
+        setFilteredTrack={setFilteredTrack}
+        filteredQuarter={filteredQuarter}
+        setFilteredQuarter={setFilteredQuarter}
+        filteredOffering={filteredOffering}
+        setFilteredOffering={setFilteredOffering} />
+      <CourseCard courses={props.courses} dropdownSelection={courseFilter} />
+    </div>
+  );
 }
 
 export default Courses;

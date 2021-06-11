@@ -1,13 +1,11 @@
-// Daniel & Catherine
 import React from 'react';
 import './style.css'
 import { Icon } from '@iconify/react';
 import paperPlaneO from '@iconify-icons/fa/paper-plane-o';
 
-
 export default function Footer() {
-  return(
-      <footer>
+  return (
+    <footer>
       <div className="footer-content">
         <p className="text-center">Copyright &copy; 2021 Leon & Ian & Catherine & Daniel</p>
         <p className="text-center">

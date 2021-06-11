@@ -1,6 +1,4 @@
 import React, { useState, useEffect } from 'react';
-// import Filter from './Filter';
-// import CourseCard from './CourseCard';
 import Navbar from './Navbar';
 import Footer from './Footer';
 import About from './About';
@@ -10,15 +8,15 @@ import './style.css';
 import CourseLog from './data/info_course.json';
 import DevLog from './data/G7team.json'
 import { HashRouter, Route, Switch } from 'react-router-dom';
-import firebase from 'firebase';
+import firebase from 'firebase/app';
 import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth';
 
-//FirebaseUI config
+// FirebaseUI config
 const uiConfig = {
-  //which sign in providers to use
+  // which sign in providers to use
   signInOptions: [
     {
-      provider: firebase.auth.EmailAuthProvider.PROVIDER_ID, 
+      provider: firebase.auth.EmailAuthProvider.PROVIDER_ID,
       // where to show the "display name" on the sign in page
       requireDisplayName: true
     }, // each object is a signin method
@@ -40,7 +38,7 @@ function App() {
 
   useEffect(() => {
     const authUnregisterFunction = firebase.auth().onAuthStateChanged((firebaseUser) => {
-      if(firebaseUser) {
+      if (firebaseUser) {
         console.log("Logged in as " + firebaseUser.displayName);
         setUser(firebaseUser);
         setIsLoading(false);
@@ -49,7 +47,6 @@ function App() {
         setUser(null);
         setIsLoading(false);
       }
-      console.log("auth state has changed");
     })
 
     return function cleanup() {
@@ -64,7 +61,7 @@ function App() {
 
   if (isLoading) {
     return (
-      <div className = "text-center">
+      <div className="text-center">
         <i className="fa fa-spinner fa-spin fa-3x" aria-label="Connecting..."></i>
       </div>
     )
@@ -72,7 +69,8 @@ function App() {
 
   let content = null;
 
-  if(!user) {
+// user authentication through firebaseUI
+  if (!user) {
     content = (
       <div className="container">
         <div className="headerone">INFOrm Signup Page</div>
@@ -82,41 +80,36 @@ function App() {
   } else {
     content = (
       <HashRouter>
-      {/* // PUT COMPONENT IN DIV IF YOU WANT TO TEST IT/DISPLAY ON NPM START */}
-      {/* IAN TEST */}
-      <div className="App">
-        {/* If you want to test your component, just call it here! */}
-        <div className="header">
-          {user &&
-          <Navbar event={handleSignOut} user={user.displayName}/>}
+        <div className="App">
+          <div className="header">
+            {user &&
+              <Navbar event={handleSignOut} user={user.displayName} />}
+          </div>
+
+          <div className="main">
+            <Switch>
+
+              <Route path="/mycourses">
+                <MyCourses />
+              </Route>
+
+              <Route path="/about">
+                <About devs={DevLog} />
+              </Route>
+
+              <Route path="/">
+                <div className="text-align-center">
+                  <Courses courses={CourseLog} />
+                </div>
+              </Route>
+
+            </Switch>
+          </div>
+
+          <Footer />
+
         </div>
-        
-        <div className="main">
-          <Switch>
-            <Route path ="/mycourses">
-              <MyCourses />
-            </Route>
-
-            <Route path="/about">
-              <About devs={DevLog}/>
-            </Route>
-            
-            <Route path="/"> 
-              <div className="text-align-center">
-                <Courses courses={CourseLog} />
-              </div>
-              {/* <Filter /> 
-              <CourseCard courses={CourseLog}/> */}
-            </Route>
-            
-          </Switch>
-
-        </div>
-
-        <Footer />
-        {/* IE: <Navbar /> etc etc. */}
-      </div>
-    </HashRouter>
+      </HashRouter>
     );
   }
 
