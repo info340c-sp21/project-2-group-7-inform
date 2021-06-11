@@ -72,6 +72,7 @@ function CardContent(props) { // <- pass course data as props
   const [modalPrefix, setModalPrefix] = useState ('');
   const [modalImg, setModalImg] = useState ('');
   const [modalName, setModalName] = useState('');
+  const [modalURL, setModalURL] = useState('');
 
   const toggle = () => setModal(!modal);
 
@@ -124,6 +125,13 @@ function CardContent(props) { // <- pass course data as props
     });
   };
 
+  const updateModalURL = (e) => {
+    setModalURL({
+      ...modalURL,
+      e
+    });
+  };
+
   // function thing(d) {
   //   console.log(`${d.CoursePrefix} ${d.CourseNumber}`);
   // }
@@ -143,7 +151,8 @@ function CardContent(props) { // <- pass course data as props
                           updateModalTrack(`${course.Track}`);
                           updateModalPrefix(`${course.CoursePrefix} ${course.CourseNumber}`);
                           updateModalImg(`${course.CourseImage}`);
-                          updateModalName(`${course.CourseTitle}`)
+                          updateModalName(`${course.CourseTitle}`);
+                          updateModalURL(`${course.CourseURL}`);
                         }}
           data-target={`#${course.CoursePrefix}${course.CourseNumber}`}
         >
@@ -161,12 +170,11 @@ function CardContent(props) { // <- pass course data as props
               <div className="tag">
                 <p>{course.InMajor}</p>
               </div>
-                {/* ADD A BUTTON TO ADD COURSE HERE */}
             </div> {/* end of 2 tags */}
           </div> {/* end of course description */}
         </div>
       ))}
-      {modal === true ? <CardModal modalDisplay={modal} clickEvent={toggle} prefix={modalPrefix.e} img={modalImg.e} name={modalName.e} header={modalHeader.e} content={modalContent.e} track={modalTrack.e} major={modalMajor.e}/> : ''}
+      {modal === true ? <CardModal modalDisplay={modal} clickEvent={toggle} prefix={modalPrefix.e} img={modalImg.e} name={modalName.e} header={modalHeader.e} content={modalContent.e} track={modalTrack.e} major={modalMajor.e} url={modalURL.e}/> : ''}
       </>
     )
 }
@@ -174,7 +182,7 @@ function CardContent(props) { // <- pass course data as props
 function CardModal (props) {
   const [modal, setModal] = useState(false);  
   const toggle = () => setModal(!modal);
-  
+
   // add a new course to the database
   const addCourse = (event) => {
 
@@ -187,10 +195,11 @@ function CardModal (props) {
       description: props.content,
       track: props.track,
       image: props.img,
+      url: props.url,
       userID: user
     }
 
-    const mycoursesRef = firebase.database().ref('mycourses')
+    const mycoursesRef = firebase.database().ref(user);
 
     mycoursesRef.push(newAddedCourse);
   }
@@ -209,6 +218,9 @@ function CardModal (props) {
         <div className="tag">
           <p>{props.major}</p>
         </div>
+        <Button onClick={() => {window.open(props.url, "_blank")}} className="tag">
+          <p> Visit UW Course Page </p> 
+        </Button>
         <Button onClick={() => {toggle(); addCourse();}} className="tag">
           <p>Add Course</p>
         </Button>
@@ -219,6 +231,9 @@ function CardModal (props) {
   );
 }
 
+// function test(props) {
+//   console.log(props);
+// }
 function SuccessModal (props) {
   
   return(
@@ -236,4 +251,5 @@ export function GetData(props) {
     console.log(thing)
   );
 }
+
 export default CourseCard;

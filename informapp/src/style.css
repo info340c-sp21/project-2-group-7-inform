@@ -290,9 +290,19 @@ input.search-query:hover {
 
 .card-container {
   margin-top: 1.5em !important;
+  padding-bottom: 56vh !important;
 }
 
 .course-cards {
+  width: 90% !important;
+  margin: 1rem;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.16), 0px 1px 3px rgba(0, 0, 0, 0.23);
+  background-color: white;
+  display: flex !important;
+  border-radius: 8px;
+}
+
+.course-cardstwo {
   width: 90% !important;
   margin: 1rem;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.16), 0px 1px 3px rgba(0, 0, 0, 0.23);
@@ -433,6 +443,17 @@ input.search-query:hover {
     width: 12rem !important;
   }
 
+  .course-cardstwo {
+    margin-bottom: 2rem;
+    margin-top: 1rem !important;
+    margin-right: 1rem;
+    margin-left: 1rem;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.16), 0px 1px 3px rgba(0, 0, 0, 0.23);
+    background-color: white;
+    flex-direction: column;
+    width: 12rem !important;
+  }
+
   .course-name {
     max-width: 100%;
     width: 12rem;
@@ -498,10 +519,6 @@ footer {
   padding-top: 1rem;
 }
 
-.footer-bottom {
-  padding-bottom: 15vh;
-}
-
 /* PAGE 2 ABOUT */
 
 .about {
@@ -509,13 +526,6 @@ footer {
   padding: 4rem 2rem;
   background-color: #e9ecef;
 }
-
-/* img {
-  max-width: 70%;
-  max-height: 70%;
-  margin: 2em;
-  margin-bottom: 0.5rem;
-} */
 
 .developers {
   justify-content: center;

@@ -8,7 +8,8 @@
     "Quarter": ["AU21"],
     "Credit": "none",
     "CourseDescription": "An introduction to Biomedical and Health Informatics through three modules focusing on current technologies: (1) Electronic Health Records (EHRs), (2) data mining the EHR, and (3) translational bioinformatics and personalized medicine. Each module includes primary literature readings, and hands-on team projects that explore the technologies involved.",
-    "InMajor": "NON-INFO"
+    "InMajor": "NON-INFO",
+    "CourseURL": "https://myplan.uw.edu/course/#/courses/BIME300"
   },
   {
    "CoursePrefix": "BIME",
@@ -19,7 +20,8 @@
    "Quarter": ["AU21"],
    "Credit": "none",
    "CourseDescription": "Introduces information technology applied in \nhealthcare across three modules that (1) overview the U.S. healthcare \nsystem, (2) establish an understanding of clinical information systems \nused in healthcare, including electronic health records, and  (3) survey\n applications in clinical informatics, such as virtual health care and \nthe learning health system. Offered: W.",
-   "InMajor": "NON-INFO"
+   "InMajor": "NON-INFO",
+   "CourseURL": "https://myplan.uw.edu/course/#/courses/BIME435"
  },
  {
    "CoursePrefix": "INFO",
@@ -30,7 +32,8 @@
    "Quarter": ["AU21"],
    "Credit": "IS",
    "CourseDescription": "Focuses on human-centered design of technologies for personal health and wellness. Students will learn how to understand people's health and wellness needs, consider ethical implications, assess existing tools, and design new health and wellness technologies. Students will learn theoretical and empirical approaches to evaluating these technologies.",
-   "InMajor": "INFO"
+   "InMajor": "INFO",
+   "CourseURL": "https://myplan.uw.edu/course/#/courses/INFO468"
  },
  {
    "CoursePrefix": "INFO",
@@ -41,7 +44,8 @@
    "Quarter": ["WI22"],
    "Credit": "IS, QSR",
    "CourseDescription": "Introduces applications of Informatics skills to \nevaluating public health. Students will learn how to leverage their \nprogramming and data competencies towards measuring and describing the \nhealth of a population. Students will learn about and compute metrics of\n population health, and leverage visualization to communicate \nstatistical insights to broad audiences. Prerequisite: INFO 201.",
-   "InMajor": "INFO"
+   "InMajor": "INFO",
+   "CourseURL": "https://myplan.uw.edu/course/#/courses/INFO478"
  },
  {
    "CoursePrefix": "INFO",
@@ -52,7 +56,8 @@
    "Quarter": ["SU21", "AU21", "WI22", "SP22"],
    "Credit": "QSR",
    "CourseDescription": "Surveys the major topics within data science, including data ingestion, cloud computing, statistical inference, machine learning, information visualization, and data ethics. Includes programming in R and Python.",
-   "InMajor": "INFO"
+   "InMajor": "INFO",
+   "CourseURL": "https://myplan.uw.edu/course/#/courses/INFO370"
  },
  {
    "CoursePrefix": "INFO",
@@ -63,7 +68,8 @@
    "Quarter": ["WI22", "SP22"],
    "Credit": "QSR",
    "CourseDescription": "Introduces modern methods in applied data science. \nEmphasizes practical applications and analysis of real-world data \nthrough a survey of common techniques in supervised and unsupervised \nmachine learning, and methods for experimental design and causal \ninference. Students learn functional, procedural, and statistical \nprogramming techniques for working with data. Prerequisite: INFO 370.",
-   "InMajor": "INFO"
+   "InMajor": "INFO",
+   "CourseURL": "https://myplan.uw.edu/course/#/courses/INFO371"
  },
  {
    "CoursePrefix": "INFO",
@@ -74,7 +80,8 @@
    "Quarter": ["AU21", "SPR22"],
    "Credit": "none",
    "CourseDescription": "Perspectives on DBMS theory, architecture, and \nimplementation. Conceptual, logical, physical modeling. Index \nstructures, query optimization and performance tuning, relational \nalgebra, transaction processing, and concurrency control. Operational \ndatabases, decision support systems, and data warehousing. Projects in \ndatabase implementation and integration. Social implications of large \ndistributed database systems. Prerequisite: INFO 330.",
-   "InMajor": "INFO"
+   "InMajor": "INFO",
+   "CourseURL": "https://myplan.uw.edu/course/#/courses/INFO430"
  },
  {
   "CoursePrefix": "AMATH",
@@ -85,7 +92,8 @@
   "Quarter": ["SU21", "AU21"],
   "Credit": "none",
   "CourseDescription": "Introduction to the use of computers to solve problems arising in the physical, biological, and engineering sciences. Application of mathematical judgment, programming architecture, and flow control in solving scientific problems. Introduction to MATLAB and Python routines for numerical programming, computation, and visualization.",
-  "InMajor": "NON-INFO"
+  "InMajor": "NON-INFO",
+  "CourseURL": "https://myplan.uw.edu/course/#/courses/AMATH301"
  },
  {
   "CoursePrefix": "AMATH",
@@ -96,7 +104,8 @@
   "Quarter": ["SU21", "AU21"],
   "Credit": "none",
   "CourseDescription": "Introductory survey of applied mathematics with emphasis on modeling of physical and biological problems in terms of differential equations. Formulation, solution, and interpretation of the results.",
-  "InMajor": "NON-INFO"
+  "InMajor": "NON-INFO",
+  "CourseURL": "https://myplan.uw.edu/course/#/courses/AMATH383"
  },
  {
   "CoursePrefix": "CSE",
@@ -107,7 +116,8 @@
   "Quarter": ["AU21"],
   "Credit": "none",
   "CourseDescription": "Introduces database management systems and writing applications that use such systems; data models, query languages, transactions, database tuning, data warehousing, and parallelism. Intended for non-majors. Not open for credit to students who have completed CSE344.",
-  "InMajor": "NON-INFO"
+  "InMajor": "NON-INFO",
+  "CourseURL": "https://myplan.uw.edu/course/#/courses/CSE414"
  },
  {
   "CoursePrefix": "CSE",
@@ -118,7 +128,8 @@
   "Quarter": ["AU21"],
   "Credit": "none",
   "CourseDescription": "Provides practical introduction to machines learning. Modules include regression, classification, clustering, retrieval, recommender systems, and deep learning, with a focus on an intuitive understanding grounded in real-world applications. Intelligent applications are designed and used to make predictions on large, complex datasets.",
-  "InMajor": "NON-INFO"
+  "InMajor": "NON-INFO",
+  "CourseURL": "https://myplan.uw.edu/course/#/courses/CSE416"
  },
  {
   "CoursePrefix": "CSE",
@@ -129,7 +140,8 @@
   "Quarter": ["AU21"],
   "Credit": "none",
   "CourseDescription": "Methods for designing systems that learn from data and improve with experience. Supervised learning and predictive modeling: decision trees, rule induction, nearest neighbors, Bayesian methods, neural networks, support vector machines, and model ensembles. Unsupervised learning and clustering.",
-  "InMajor": "NON-INFO"
+  "InMajor": "NON-INFO",
+  "CourseURL": "https://myplan.uw.edu/course/#/courses/CSE446"
  },
  {
   "CoursePrefix": "ECON",
@@ -140,7 +152,8 @@
   "Quarter": ["AU21"],
   "Credit": "none",
   "CourseDescription": "Applies statistical modeling to empirical work in economics. Focuses on regression analysis; derivations of regression estimators and their properties; and applied computer work in estimating multiple regression models.",
-  "InMajor": "NON-INFO"
+  "InMajor": "NON-INFO",
+  "CourseURL": "https://myplan.uw.edu/course/#/courses/ECON482"
  },
  {
   "CoursePrefix": "MATH",
@@ -151,7 +164,8 @@
   "Quarter": ["SU21"],
   "Credit": "none",
   "CourseDescription": "Systems of linear equations, vector spaces, matrices, subspaces, orthogonality, least squares, eigenvalues, eigenvectors, applications. For students in engineering, mathematics, and the sciences.",
-  "InMajor": "NON-INFO"
+  "InMajor": "NON-INFO",
+  "CourseURL": "https://myplan.uw.edu/course/#/courses/MATH308"
  },
  {
   "CoursePrefix": "MATH",
@@ -162,7 +176,8 @@
   "Quarter": ["AU21"],
   "Credit": "none",
   "CourseDescription": "Covers intermediate topics in undergraduate mathematics.",
-  "InMajor": "NON-INFO"
+  "InMajor": "NON-INFO",
+  "CourseURL": "https://myplan.uw.edu/course/#/courses/MATH380"
  },
  {
   "CoursePrefix": "PSYCH",
@@ -173,7 +188,8 @@
   "Quarter": ["AU21"],
   "Credit": "none",
   "CourseDescription": "Selected aspects of human cognition, perception, and performance.",
-  "InMajor": "NON-INFO"
+  "InMajor": "NON-INFO",
+  "CourseURL": "https://myplan.uw.edu/course/#/courses/PSYCH331"
  },
  {
    "CoursePrefix": "INFO",
@@ -184,7 +200,8 @@
    "Quarter": [],
    "Credit": "VLPA",
    "CourseDescription": "Build fluency in expressing information visually as \ndiagrams, charts, maps, and icons. Learn to solve design problems, give \nand receive critique, follow an iterative process of design refinement, \nand learn technical skills. Understand the nature of visual potential, \nvisual design principles, and the impact of color and typography.",
-   "InMajor": "INFO"
+   "InMajor": "INFO",
+   "CourseURL": "https://myplan.uw.edu/course/#/courses/INFO362"
  },
  {
   "CoursePrefix": "CSE",
@@ -195,7 +212,8 @@
   "Quarter": ["AU21"],
   "Credit": "none",
   "CourseDescription": "Techniques for creating effective visualizations of data based on principles from graphic design, perceptual psychology, and statistics. Topics include visual encoding models, exploratory data analysis, visualization software, interaction techniques, graphical perception, color, animation, high-dimensional data, cartography, network visualization, and text visualization.",
-  "InMajor": "NON-INFO"
+  "InMajor": "NON-INFO",
+  "CourseURL": "https://myplan.uw.edu/course/#/courses/CSE442"
  },
  {
    "CoursePrefix": "INFO",
@@ -206,7 +224,8 @@
    "Quarter": [],
    "Credit": "none",
    "CourseDescription": "Fundamentals of mobile UX & UI design through the \nlens of creating your own mobile OS and core mobile apps in a design \nstudio setting. Includes creating a mobile design language and mobile \npatterns, app review by professional designers, and how design for \nmobile is unique from other mediums. Recommended: INFO 360",
-   "InMajor": "INFO"
+   "InMajor": "INFO",
+   "CourseURL": "https://myplan.uw.edu/course/#/courses/INFO365"
  },
  {
    "CoursePrefix": "INFO",
@@ -217,7 +236,8 @@
    "Quarter": ["AU21", "SP22"],
    "Credit": "VLPA, QSR",
    "CourseDescription": "Techniques and theory for visualizing, analyzing, and \nsupporting interaction with structured data like numbers, text, and \nrelations. Provides practical experience designing and building \ninteractive visualizations for the web. Exposes students to cognitive \nscience, statistics, and perceptual psychology. An empirical approach \nwill be used to design and evaluate visualizations. Prerequisite: INFO \n340 or CSE 154; CSE 143 or CSE 163; and either QMETH 201, Q SCI 381, \nSTAT 220, STAT 221/CS&SS 221/SOC 221, STAT 290, STAT 311, or STAT \n390.",
-   "InMajor": "INFO"
+   "InMajor": "INFO",
+   "CourseURL": "https://myplan.uw.edu/course/#/courses/INFO474"
  },
  {
   "CoursePrefix": "CSE",
@@ -228,7 +248,8 @@
   "Quarter": ["AU21"],
   "Credit": "none",
   "CourseDescription": "Human-Computer Interaction (HCI) theory and techniques. Methods for designing, prototyping, and evaluating user interfaces to computing applications. Human capabilities, interface technology, interface design methods, and interface evaluation tools and techniques.",
-  "InMajor": "NON-INFO"
+  "InMajor": "NON-INFO",
+  "CourseURL": "https://myplan.uw.edu/course/#/courses/CSE440"
  },
  {
   "CoursePrefix": "INFO",
@@ -239,7 +260,8 @@
   "Quarter": ["AU21"],
   "Credit": "none",
   "CourseDescription": "Introduces the theory and practice of cooperative user-centered software development, applying fundamental theories and techniques from social psychology, computer-supported collaborative work, and software engineering.",
-  "InMajor": "NON-INFO"
+  "InMajor": "NON-INFO",
+  "CourseURL": "https://myplan.uw.edu/course/#/courses/INFO442"
  },
  {
   "CoursePrefix": "INFO",
@@ -250,7 +272,8 @@
   "Quarter": ["AU21"],
   "Credit": "none",
   "CourseDescription": "What does it mean for a technology to be good or evil? Students learn about and critique existing design patterns, features, and products through a diverse set of ethical theories, and they design new technologies grounded in systematic principles of moral reasoning. Mix of studio and seminar.",
-  "InMajor": "INFO"
+  "InMajor": "INFO",
+  "CourseURL": "https://myplan.uw.edu/course/#/courses/INFO466"
  },
  {
    "CoursePrefix": "INFO",
@@ -261,7 +284,8 @@
    "Quarter": ["SU21", "WI22"],
    "Credit": "none",
    "CourseDescription": "Introduction to Information Architecture (IA) \nmethodologies and tools used to design and build information spaces. \nDiscusses IA core concepts of navigation, labeling, data modeling, \ntaxonomy and information personas. Also discusses wireframes, sitemaps, \ninformation design and integrating IA work with a UX strategy.",
-   "InMajor": "INFO"
+   "InMajor": "INFO",
+   "CourseURL": "https://myplan.uw.edu/course/#/courses/INFO331"
  },
  {
    "CoursePrefix": "INFO",
@@ -272,7 +296,8 @@
    "Quarter": [],
    "Credit": "none",
    "CourseDescription": "Explores principles of metadata schema and application\n profile design and implementation using XML technologies. Examines \nsyntactic and semantic interoperability among diverse schemas and \napplication profiles. Prerequisite: INFO 330; INFO 331.",
-   "InMajor": "INFO"
+   "InMajor": "INFO",
+   "CourseURL": "https://myplan.uw.edu/course/#/courses/INFO431"
  },
  {
    "CoursePrefix": "INFO",
@@ -283,7 +308,8 @@
    "Quarter": [],
    "Credit": "IS",
    "CourseDescription": "Introduces key concepts in understanding the content \nlifecycle in context of an organization's web, mobile, and other \ncommunication channels. Provides knowledge of key theories and \nprinciples in information architecture and practical application of \nskills including user research; information collection and analysis; and\n information organization and presentation.",
-   "InMajor": "INFO"
+   "InMajor": "INFO",
+   "CourseURL": "https://myplan.uw.edu/course/#/courses/INFO433"
  },
  {
    "CoursePrefix": "INFO",
@@ -294,7 +320,8 @@
    "Quarter": ["AU21", "SPR22"],
    "Credit": "none",
    "CourseDescription": "Introduces server-side web development programming, \nservices, tools, protocols, best practices and techniques for \nimplementing data-driven and scalable web applications. Connects topics \nfrom human-centered design, information architecture, databases, data \nanalytics and security to build a solution. Prerequisite: either CSE 143\n or CSE 163; either INFO 340 or CSE 154; and INFO 330.",
-   "InMajor": "INFO"
+   "InMajor": "INFO",
+   "CourseURL": "https://myplan.uw.edu/course/#/courses/INFO441"
  },
  {
    "CoursePrefix": "INFO",
@@ -305,7 +332,8 @@
    "Quarter": ["AU21", "SPR22"],
    "Credit": "none",
    "CourseDescription": "Perspectives on DBMS theory, architecture, and \nimplementation. Conceptual, logical, physical modeling. Index \nstructures, query optimization and performance tuning, relational \nalgebra, transaction processing, and concurrency control. Operational \ndatabases, decision support systems, and data warehousing. Projects in \ndatabase implementation and integration. Social implications of large \ndistributed database systems. Prerequisite: INFO 330.",
-   "InMajor": "INFO"
+   "InMajor": "INFO",
+   "CourseURL": "https://myplan.uw.edu/course/#/courses/INFO430"
  },
  {
    "CoursePrefix": "INFO",
@@ -316,7 +344,8 @@
    "Quarter": ["AU21", "WI22", "SPR22"],
    "Credit": "none",
    "CourseDescription": "Examines the risk inherent in use of technology, and \nhow to manage risk to information, data, and technology in \norganizations. Topics include risk management frameworks, risk \ntolerance, key risk indicators, the legislative and regulatory \nenvironment, compliance, and new avenues of risk such as social media \nand mobile.",
-   "InMajor": "INFO"
+   "InMajor": "INFO",
+   "CourseURL": "https://myplan.uw.edu/course/#/courses/INFO312"
  },
  {
    "CoursePrefix": "INFO",
@@ -327,7 +356,8 @@
    "Quarter": [],
    "Credit": "NW",
    "CourseDescription": "Basic concepts of local and wide-area computer \nnetworking including an overview of services provided by networks, \nnetwork topologies and hardware, packet switching, client/server \narchitectures, network protocols, and network servers and applications. \nAlso addresses management, security, authentication, and policy issues \nassociated with distributed systems. Prerequisite: CSE 142 or CSE 143.",
-   "InMajor": "INFO"
+   "InMajor": "INFO",
+   "CourseURL": "https://myplan.uw.edu/course/#/courses/INFO314"
  },
  {
    "CoursePrefix": "INFO",
@@ -338,7 +368,8 @@
    "Quarter": ["AU21", "WI22", "SPR22"],
    "Credit": "none",
    "CourseDescription": "Explores emerging topics and unique subjects in \ninformation assurance and cybersecurity (IAC) not otherwise covered in \nthe IAC curriculum.",
-   "InMajor": "INFO"
+   "InMajor": "INFO",
+   "CourseURL": "https://myplan.uw.edu/course/#/courses/INFO415"
  },
  {
   "CoursePrefix": "CSE",
@@ -349,7 +380,8 @@
   "Quarter": ["AU21"],
   "Credit": "none",
   "CourseDescription": "Foundations of modern computer security, including software security, operating system security, network security, applied cryptography, human factors, authentication, anonymity, and web security.",
-  "InMajor": "NON-INFO"
+  "InMajor": "NON-INFO",
+  "CourseURL": "https://myplan.uw.edu/course/#/courses/CSE484"
  }
 
 ]

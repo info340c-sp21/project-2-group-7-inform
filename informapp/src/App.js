@@ -36,7 +36,7 @@ const uiConfig = {
 function App() {
   const [errorMessage, setErrorMessage] = useState(undefined);
   const [user, setUser] = useState(undefined);
-  const [isLoading, setIsLoading] = useState();
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const authUnregisterFunction = firebase.auth().onAuthStateChanged((firebaseUser) => {
