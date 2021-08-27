@@ -12,7 +12,7 @@
     "key": "leon",
     "year": "Junior",
     "major": "Informatics",
-    "img": "https://raw.githubusercontent.com/info340c-sp21/project-2-group-7-inform/401d44359d8c8d9c6227d75941505447bf47d67d/informapp/src/img/leons_profile1.png?token=AIRXPAC3J4L2QWWLB5TUDYLAZME4U",
+    "img": "informapp/src/img/leons_profile1.png",
     "linkedin": "https://www.linkedin.com/in/leon-kan/"
   },
   {
@@ -20,7 +20,7 @@
     "key": "catherine",
     "year": "Junior",
     "major": "Business & Informatics",
-    "img": "https://raw.githubusercontent.com/info340c-sp21/project-2-group-7-inform/401d44359d8c8d9c6227d75941505447bf47d67d/informapp/src/img/catherine_profile1.jpg?token=AIRXPAG54N7SCVQBCRKKBKTAZMEAO",
+    "img": "../img/catherine_profile1.jpg",
     "linkedin": "https://www.linkedin.com/in/catherinemiao2022/"
   },
   {
